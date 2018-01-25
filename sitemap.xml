@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://www.eigen.co/</loc>
+  <lastmod>2018-01-25T11:59:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/product/about-eigen-ingenuity.html</loc>
+  <lastmod>2018-01-25T12:00:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/product/shared-asset-model.html</loc>
+  <lastmod>2018-01-25T12:00:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/product/operations-dashboard.html</loc>
+  <lastmod>2018-01-25T12:00:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/product/barrier-status.html</loc>
+  <lastmod>2018-01-25T12:00:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/uses/efficient-work.html</loc>
+  <lastmod>2017-09-05T10:50:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/uses/shared-awareness.html</loc>
+  <lastmod>2017-09-05T10:50:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/uses/condition-based-maintenance.html</loc>
+  <lastmod>2017-09-05T10:50:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/uses/cases/</loc>
+  <lastmod>2017-09-05T10:50:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/services/consulting.html</loc>
+  <lastmod>2018-01-25T11:59:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/services/integration.html</loc>
+  <lastmod>2018-01-25T11:59:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/services/support.html</loc>
+  <lastmod>2018-01-25T11:59:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/about/our-story.html</loc>
+  <lastmod>2017-09-05T10:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.eigen.co/careers/opportunities.html</loc>
+  <lastmod>2018-01-25T12:00:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
