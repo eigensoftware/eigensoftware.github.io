@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "Eigen Ltd",
+  "launch_path": "/index.html",
+  "description": "Efficient Work, an open platform for a new connected way of working.",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Eigen Ltd",
+      "description": "Efficient Work, an open platform for a new connected way of working."
+    }
+  }
+}
