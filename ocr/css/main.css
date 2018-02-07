@@ -1,0 +1,12 @@
+body {
+	-webkit-user-select: none;
+}
+
+#c {
+	position: relative;
+	
+}
+
+#c3d canvas {
+	position: absolute;
+}

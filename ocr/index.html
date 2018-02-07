@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>EIGEN OCR</title>
+	<meta charset="utf-8">
+	<meta name="generator" content="EIGEN OCR">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="HandheldFriendly" content="true" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/croppie.css" rel="stylesheet">
+	
+	
+
+</head>
+<body>
+	
+	
+
+
+	<div class="loading-holder">
+		<div class="top-area">
+			<div class="loading-bar">
+				<img src="images/loading.png" class="rotating" />
+				<p class="p-serif">Loading</p>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div class="tc-holder">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+					<img src="images/logo.jpg" class="logo"/>
+					<hr/>
+				</div>
+				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+					<p class="instructions">Select Image</p>
+					<div class="bordered images-holder">
+						<label for="cameraInput" class="lbl">
+							<i class="fa fa-cloud-upload"></i> Take/Upload Image
+						</label>
+						<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" accept="image/x-png,image/jpeg" />
+					</div>
+					<div class="bordered canvas">
+
+
+					</div>
+					
+				</div>
+
+				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+					<img src="images/back.png" class="backgo"/>
+					<div class="hold">
+						<label class="radio-inline">
+							<input type="radio" name="ocr" value="offline">Offline OCR
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="ocr" value="online" checked="checked">Online OCR
+						</label>
+					</div>
+					<button class="go">GO</button>
+				</div>
+
+				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+					<hr/>
+					<p class="obf">Objects Found</p>
+					<p id="status"></p>
+					<code id="result"></code>
+				</div>
+
+			</div>
+
+		</div>
+		
+
+
+	</div>
+	<div class="loading-holder ajax">
+		<div class="top-area">
+			<div class="loading-bar">
+				<img src="images/loading.png" class="rotating" />
+				<p class="p-serif">Loading</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='js/tesseract.js'></script>
+	<script type="text/javascript" src="js/croppie.js"></script>
+	<script type="text/javascript" src="js/exif.js"></script>
+	<script type="text/javascript" src="js/binaryajax.js"></script>
+	<script type="text/javascript" src="js/canvasResize.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+
+
+
+
+
+</body>
+</html>
