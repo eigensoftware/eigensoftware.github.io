@@ -13,14 +13,12 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/croppie.css" rel="stylesheet">
-	
-	
+
 
 </head>
 <body>
-	
-	
 
+	<div id="commonmenu"></div>
 
 	<div class="loading-holder">
 		<div class="top-area">
@@ -31,10 +29,10 @@
 		</div>
 	</div>
 
-	
+
 
 	<div class="tc-holder">
-		
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
@@ -53,7 +51,7 @@
 
 
 					</div>
-					
+
 				</div>
 
 				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
@@ -79,7 +77,7 @@
 			</div>
 
 		</div>
-		
+
 
 
 	</div>
@@ -101,10 +99,45 @@
 	<script type="text/javascript" src="js/canvasResize.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 
+	<!-- Eigen CommonMenu mock -->
+	<link href="eigen/app.css" rel="stylesheet">
+	<script>
+		window.fetch = undefined; // needed for request mocking
+	</script>
+	<script src="eigen/app.js"></script>
+	<script>
+		var config = {
+			serverUrl: 'https://lnopt.nor.root.lundin.lan',
+			element: document.querySelector('#commonmenu'),
+			relativeTo: document.querySelector('#commonmenu'),
+			elasticSearchClient: 'elasticsearch-test',
+			eventCheckRepository: 'eventcheckrepository',
+			appContainers: [document],
+		};
+		const commonMenu = EigenCommonMenu(config);
+	</script>
+	<!-- -->
 
+	<!-- Opening common menu example -->
+	<h2>Example Tags</h2>
+	<div>
+		<a href="" class="commonmenu">76CB010</a>
+	</div>
+	<div>
+		<a href="" class="commonmenu">20VA001</a>
+	</div>
 
-
-
+	<script>
+		/*
+			Only requests for two tags are currently mocked:
+			76CB010 & 20VA001
+		*/
+		$('.commonmenu').on('click', function(event) {
+			event.preventDefault();
+			commonMenu.dispatcher.emit('commonmenu', event, `assets-${this.textContent}`);
+		});
+	</script>
+	<!-- -->
 
 </body>
 </html>
