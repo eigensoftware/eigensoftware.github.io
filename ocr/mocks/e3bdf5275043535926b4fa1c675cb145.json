@@ -1,0 +1,1176 @@
+{
+  "total": 1,
+  "results": [
+    {
+      "_source": {
+        "asset": {
+          "prevailcomponentname": "SEPARATOR",
+          "contractorcode": "AET",
+          "partnumber": "301083",
+          "areaname": "PROCESS INTERMEDIATE DECK",
+          "location": 0,
+          "hassetpointsoftypecpsr": "NO",
+          "categorycode": "V",
+          "hasexplosionprotect": "NO",
+          "equiphistoryrequired": "YES",
+          "type": "Equipment",
+          "costcode": "PL338-6220-220-0-",
+          "contractorname": "AKER ENGINEERING",
+          "systemname": "SEPARATION AND STABILISATION",
+          "lastupdate": 1511187035075,
+          "projectreference": "C000227",
+          "height": "4685 mm",
+          "component": "SEPARATOR",
+          "assettag": "20VA001",
+          "manufacturerpartnumber": "301083",
+          "updatedbyusername": "WDAUA",
+          "functioncodedesc": "SEPARATORS",
+          "excertificationstandard": "ATEX",
+          "supplier": "LEFFER",
+          "contractor": "AET",
+          "status": [
+            {
+              "status": "green",
+              "description": "20VA001 has 1 green downstream AssetObjects",
+              "context": "global"
+            }
+          ],
+          "width": "3990 mm",
+          "workmateresource": 30001018,
+          "categoryaveva": "Equipment",
+          "class": [
+            "PressureVessel",
+            "MainEquipment",
+            "LundinEquipment",
+            "LundinAssetObject",
+            "AssetObject"
+          ],
+          "label": {
+            "global": [
+              "test"
+            ]
+          },
+          "createddate": "2014-10-27 19:20:29.0",
+          "exequipmentisrequired": "NO",
+          "hasactiveprograms": 4,
+          "statusval": 200,
+          "tis_io": "ER245",
+          "functioncode": "VA",
+          "category": "Separator",
+          "system": {
+            "desc": "System 20 - Separation and stabilisation",
+            "name": "System 20",
+            "key": "System 20^System 20 - Separation and stabilisation"
+          },
+          "excertificatenumber": "EC Declaration (23380E-KVEST-245-R-VB-00011)",
+          "assetobjectid": "4259366",
+          "safetycriticalelement": "N",
+          "manufacturer": "LEFFER",
+          "active": true,
+          "exmarking": "II 3G",
+          "highestcriticality": "HIGH",
+          "model": 301083,
+          "desc": "PRIMARY INLET SEPARATOR (20VA001)",
+          "exitem": "N",
+          "tislocationcode": "EG",
+          "exrequiredequipment": "N",
+          "updateddate": "2016-04-12 02:58:54.0",
+          "bitmapcriticality": 20,
+          "contentweight": "45642 kg",
+          "serialnumber": 7905,
+          "tispotitle": "SEPARATORS",
+          "criticality": "H",
+          "hasinstrumentation": [
+            {
+              "category": "Level",
+              "assettag": "20LST1032",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LST1032",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Pressure",
+              "assettag": "20PSV1038",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Pressure/20PSV1038",
+              "class": [
+                "PressureSafetyValve",
+                "PressureRelief",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Level",
+              "assettag": "20LST1035",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LST1035",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Level",
+              "assettag": "20LG1033",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LG1033",
+              "class": [
+                "Gauge",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Flow",
+              "assettag": "20FO1041",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Flow/20FO1041",
+              "class": [
+                "Orifice",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Flow",
+              "assettag": "20FO1054",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Flow/20FO1054",
+              "class": [
+                "Orifice",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "BurnerCombustionBlow",
+              "assettag": "20BSV1040",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/BurnerCombustionBlow/20BSV1040",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Flow",
+              "assettag": "20FO1053",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Flow/20FO1053",
+              "class": [
+                "Orifice",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Temperature",
+              "assettag": "20TST1461",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Temperature/20TST1461",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Pressure",
+              "assettag": "20PT1036",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Pressure/20PT1036",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Emergency",
+              "assettag": "20ESV1047",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Emergency/20ESV1047",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Emergency",
+              "assettag": "20ESV1048",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Emergency/20ESV1048",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Emergency",
+              "assettag": "20ESV1043",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Emergency/20ESV1043",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Level",
+              "assettag": "20LV1051",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LV1051",
+              "class": [
+                "ActuatedControlValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Emergency",
+              "assettag": "20ESV1045",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Emergency/20ESV1045",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Pressure",
+              "assettag": "20PST1037",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Pressure/20PST1037",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Level",
+              "assettag": "20LT1031",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LT1031",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Level",
+              "assettag": "20LT1034",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LT1034",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Flow",
+              "assettag": "20FT1253",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Flow/20FT1253",
+              "class": [
+                "Transmitter",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Pressure",
+              "assettag": "20PSV1039",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Pressure/20PSV1039",
+              "class": [
+                "PressureSafetyValve",
+                "PressureRelief",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Unspecified",
+              "assettag": "20XSV1042",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Unspecified/20XSV1042",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Level",
+              "assettag": "20LG1030",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Level/20LG1030",
+              "class": [
+                "Gauge",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "Unspecified",
+              "assettag": "20XSV1049",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/InstrumentationAndControl/Instruments/Unspecified/20XSV1049",
+              "class": [
+                "BlockValve",
+                "ControlValve",
+                "Instrumentation",
+                "LundinInstrument",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            }
+          ],
+          "area": [
+            [
+              {
+                "desc": "Area P - Process Area/Modules",
+                "name": "P",
+                "key": "P^Area P - Process Area/Modules"
+              },
+              {
+                "desc": "Area P20 - Process Intermediate Deck , incl. Well Kill & CT deck",
+                "name": "P20",
+                "key": "P20^Area P20 - Process Intermediate Deck , incl. Well Kill & CT deck"
+              }
+            ]
+          ],
+          "hasvalve": [
+            {
+              "category": "GateValve",
+              "assettag": "20GT0276",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0276",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0095",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0095",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0094",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0094",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0099",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0099",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0397",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0397",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0396",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0396",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0291",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0291",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "CheckValve",
+              "assettag": "20CH0097",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/CheckValve/20CH0097",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0398",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0398",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "CheckValve",
+              "assettag": "20CH0060",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/CheckValve/20CH0060",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0383",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0383",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0242",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0242",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0382",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0382",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0240",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0240",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0157",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0157",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "CheckValve",
+              "assettag": "20CH0012",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/CheckValve/20CH0012",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0065",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0065",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0066",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0066",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0063",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0063",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0158",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0158",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0064",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0064",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0360",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0360",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0061",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0061",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0338",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0338",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0062",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0062",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0357",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0357",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0167",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0167",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0080",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0080",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0346",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0346",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0067",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0067",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            },
+            {
+              "category": "GateValve",
+              "assettag": "20GT0327",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Valves/GateValve/20GT0327",
+              "class": [
+                "ManualValve",
+                "LundinValve",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            }
+          ],
+          "dryweight": "46872 kg",
+          "path": "Edvard_Grieg_Field/Edvard_Grieg/Equipment/VesselAndColumnPressurized/Separator/20VA001",
+          "length": "11770 mm",
+          "equipmentwm": "SEPARATOR, GENERAL,HANS LEFFER,301083",
+          "statusisactive": "YES",
+          "discipline": "R",
+          "norwegiandescription": "Primærinnløps separator",
+          "typeaveva": "SEPARATOR",
+          "statusdesc": "Active",
+          "hasbarriers": 0,
+          "istypeofresource": [
+            {
+              "category": "Resources",
+              "assettag": "30001018",
+              "path": "Resources/30001018",
+              "class": [
+                "Resource",
+                "AssetObject"
+              ]
+            }
+          ],
+          "site": "AEG",
+          "documents": [
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SUPPORTS 3",
+              "filename": "23380E-KVEST-245-R-XS-00036.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00036.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Technical Procedures (Incl. Comm. manual and procedures)",
+              "description": "SURFACE PREPARATION AND COATING PROCEDURE",
+              "filename": "23380E-KVEST-245-M-KA-00003",
+              "type": "KA",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-M-KA-00003"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20018.004",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20018.004"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Operation and Maintenance Manual",
+              "description": "INSTALLATION, OPERATION AND MAINTENANCE PROCEDURE, PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-R-MB-00002",
+              "type": "MB",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-MB-00002"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Logic diagram",
+              "description": "SYSTEM CONTROL DIAGRAM PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-001-I-XL-20-00001.001",
+              "type": "XL",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-I-XL-20-00001.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "List, registers and indexes",
+              "description": "SUPPLIER/SUB-SUPPLIER CONTACTS LIST FOR SEPARATORS",
+              "filename": "23380E-KVEST-245-O-LA-00001",
+              "type": "LA",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-O-LA-00001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "List, registers and indexes",
+              "description": "LIST OF CERTIFICATES PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-Z-LA-00014",
+              "type": "LA",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-Z-LA-00014"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "TRANSPORT DRAWING, PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-R-XS-00038.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00038.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SAND JETTING SYSTEM",
+              "filename": "23380E-KVEST-245-R-XS-00033.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00033.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT PERFORATED DISTRIBUTION BAFFLES AND INCLINED PLATE",
+              "filename": "23380E-KVEST-245-R-XS-00031.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00031.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 44  PRODUCED WATER",
+              "filename": "23380E-KVEST-001-E-XN-44001.001",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-44001.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR, INTERNAL ATTACHMENT DRAWING 2",
+              "filename": "23380E-KVEST-245-R-XS-00027.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00027.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SUPPORTS - 1",
+              "filename": "23380E-KVEST-245-R-XS-00034.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00034.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Location drawings (plot plans)",
+              "description": "PLOT PLAN INTERMEDIATE DECK",
+              "filename": "23380E-KVEST-001-L-XF-00005.001",
+              "type": "XF",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-L-XF-00005.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Data Sheet",
+              "description": "CHEMICAL INVENTORY AND SAFETY DATA SHEETS FOR SEPARATORS",
+              "filename": "23380E-KVEST-245-S-DS-00001",
+              "type": "DS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-S-DS-00001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Piping and instrumentation diagram (P&ID)",
+              "description": "PROCESS P&ID PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-001-P-XB-20-00001.001",
+              "type": "XB",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-P-XB-20-00001.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Layout drawings",
+              "description": "LIGHTING AND POWER LAYOUT   INTERM. DECK - P20 T700-T750 CENTRAL   EL.521.400",
+              "filename": "23380E-KVEST-001-E-XE-00522.001",
+              "type": "XE",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XE-00522.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20027.001",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20027.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20027.002",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20027.002"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "General Arrangement & capacity plan",
+              "description": "20VA001 - PRIM INLET - NEW SOLUTION W/FHG60 & 50MM TUBE-1-BRACKETS",
+              "filename": "23380E-KVEST-674-I-XD-00031.001",
+              "type": "XD",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-674-I-XD-00031.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR, INTERNAL ATTACHMENT DRAWING 3",
+              "filename": "23380E-KVEST-245-R-XS-00028.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00028.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SUPPORTS 4",
+              "filename": "23380E-KVEST-245-R-XS-00037.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00037.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Certificates",
+              "description": "CERTIFICATE OF CONFORMITY PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-R-VB-00007",
+              "type": "VB",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-VB-00007"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR NOZZLE DETAIL DRAWING 3",
+              "filename": "23380E-KVEST-245-R-XS-00022.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00022.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "General Arrangement & capacity plan",
+              "description": "GENERAL ARRANGEMENT DRAWING - PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-R-XD-00002.001",
+              "type": "XD",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XD-00002.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Spare parts list",
+              "description": "SPARE PARTS LIST AND INTERCHANGEABILITY RECORD (SPLIR) FOR SEPARATORS",
+              "filename": "23380E-KVEST-245-O-MC-00001",
+              "type": "MC",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-O-MC-00001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR NOZZLE DETAIL DRAWING 2",
+              "filename": "23380E-KVEST-245-R-XS-00021.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00021.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 24 DEHYDRATION",
+              "filename": "23380E-KVEST-001-E-XN-24002.001",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-24002.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "General Arrangement & capacity plan",
+              "description": "PROCESS GENERAL ARRANGEMENT DRAWING - PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-P-XD-00002.001",
+              "type": "XD",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-P-XD-00002.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SUPPORTS - 2",
+              "filename": "23380E-KVEST-245-R-XS-00035.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00035.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Final documentation Index, Table of content and standard documentation",
+              "description": "FINAL DOCUMENTATION LIST OF CONTENT - SEPARATORS",
+              "filename": "23380E-KVEST-245-O-MD-00001",
+              "type": "MD",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-O-MD-00001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SUPPORTS - 5",
+              "filename": "23380E-KVEST-245-R-XS-00094.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00094.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR NOZZLE DETAIL DRAWING 4",
+              "filename": "23380E-KVEST-245-R-XS-00023.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00023.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR EXTERNAL ATTACHMENT DRAWING 1",
+              "filename": "23380E-KVEST-245-R-XS-00024.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00024.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR, INTERNAL ATTACHMENT DRAWING 1",
+              "filename": "23380E-KVEST-245-R-XS-00026.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00026.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20028.002",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20028.002"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20013.001",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20013.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT EVENFLOW HE",
+              "filename": "23380E-KVEST-245-R-XS-00030.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00030.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20028.001",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20028.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Data Sheet",
+              "description": "EQUIPMENT DATA SHEET FOR PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-R-DS-00002",
+              "type": "DS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-DS-00002"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing",
+              "description": "HEAT TRACE ISOMETRIC SYSTEM 20 SEPARATION AND STABILISATION",
+              "filename": "23380E-KVEST-001-E-XN-20009.004",
+              "type": "XN",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-E-XN-20009.004"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Data Sheet",
+              "description": "PROCESS DATASHEET - ER245 SEPARATORS",
+              "filename": "23380E-KVEST-001-P-DS-00003",
+              "type": "DS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-P-DS-00003"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR ARRANGEMENT SPIRAFLOW 80 CYCLONE DECK",
+              "filename": "23380E-KVEST-245-R-XS-00032.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00032.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Certificates",
+              "description": "LIFTING EQUIPMENT CERTIFICATE PRIMARY INLET SEPARATOR",
+              "filename": "23380E-KVEST-245-R-VB-00017",
+              "type": "VB",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-VB-00017"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR, EXTERNAL ATTACHMENT DRAWING 2",
+              "filename": "23380E-KVEST-245-R-XS-00025.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00025.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Technical Procedures (Incl. Comm. manual and procedures)",
+              "description": "CONTROL DESCRIPTION / PROCESS NARRATIVE",
+              "filename": "23380E-KVEST-279-P-KA-00001",
+              "type": "KA",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-279-P-KA-00001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR, INTERNAL ATTACHMENT DRAWING 4",
+              "filename": "23380E-KVEST-245-R-XS-00029.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00029.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Report",
+              "description": "MATERIAL HANDLING REPORT",
+              "filename": "23380E-KVEST-001-L-RA-00003",
+              "type": "RA",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-001-L-RA-00003"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "General Arrangement & capacity plan",
+              "description": "20VA001 - PRIM INLET - NEW SOLUTION W/FHG60 & 50MM TUBE-2-SIDE VIEW",
+              "filename": "23380E-KVEST-674-I-XD-00032.001",
+              "type": "XD",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-674-I-XD-00032.001"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Detail cross sectional drawings",
+              "description": "PRIMARY INLET SEPARATOR NOZZLE DETAIL DRAWING 1",
+              "filename": "23380E-KVEST-245-R-XS-00020.001",
+              "type": "XS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-245-R-XS-00020.001"
+            }
+          ],
+          "statusaveva": "Active",
+          "hassetpoints": "NO",
+          "updatedbyuserlogon": "WDAUA",
+          "history": [],
+          "typeoftag": "STANDARD",
+          "iscategorysetpointenabled": "NO",
+          "originalpo": "ER245",
+          "statuslastchanged": "2016-04-12 02:58:54.0",
+          "globalidentifier": 1000000000190860,
+          "maintagnumber": "20VA001",
+          "tislocationname": "Edvard Grieg",
+          "categoryname": "VESSELS AND COLUMNS -PRESSURISED (NORSOK)",
+          "producer": "HANS LEFFER GMBH",
+          "subsystem": "2001-03",
+          "isownedbyproject": "NO",
+          "ponumber": "ER245",
+          "installationdate": "2015.11.28"
+        },
+        "assettag": "20VA001"
+      },
+      "_score": 11.823351
+    }
+  ],
+  "tzoffset": 3600000
+}

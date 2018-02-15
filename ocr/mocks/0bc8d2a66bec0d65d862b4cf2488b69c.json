@@ -1,0 +1,165 @@
+{
+  "total": 1,
+  "results": [
+    {
+      "_source": {
+        "asset": {
+          "prevailcomponentname": "HOUSING",
+          "contractorcode": "AET",
+          "parenttag": "76CT004",
+          "partnumber": "FHP320-4-BA-G2",
+          "areaname": "UTILITY CELLAR DECK",
+          "location": 0,
+          "hassetpointsoftypecpsr": "NO",
+          "categorycode": "CM",
+          "hasexplosionprotect": "NO",
+          "equiphistoryrequired": "YES",
+          "costcode": "PL338-6220-276-0-",
+          "type": "Equipment",
+          "contractorname": "AKER ENGINEERING",
+          "maintag": "76SB004",
+          "systemname": "EMERGENCY PREPAREDNESS",
+          "lastupdate": 1510786191036,
+          "projectreference": "C000227",
+          "height": "140 mm",
+          "component": "FILTER HOUSING",
+          "assettag": "76CB010",
+          "manufacturerpartnumber": "FHP320",
+          "updatedbyusername": "WDAUA",
+          "functioncodedesc": "NON-REGENERATIVE FILTER",
+          "supplier": "HARDING",
+          "contractor": "AET",
+          "width": "140 mm",
+          "workmateresource": 10047800,
+          "categoryaveva": "Equipment",
+          "class": [
+            "Filter",
+            "MainEquipment",
+            "LundinEquipment",
+            "LundinAssetObject",
+            "AssetObject"
+          ],
+          "createddate": "2014-10-28 19:38:25.0",
+          "exequipmentisrequired": "NO",
+          "hasactiveprograms": 1,
+          "statusval": 200,
+          "tis_io": "ES101",
+          "functioncode": "CB",
+          "category": "NonRegenFilter",
+          "system": {
+            "desc": "System 76 - Emergency preparedness",
+            "name": "System 76",
+            "key": "System 76^System 76 - Emergency preparedness"
+          },
+          "assetobjectid": "4302821",
+          "safetycriticalelement": "N",
+          "manufacturer": "MP FILTRI",
+          "active": true,
+          "highestcriticality": "HIGH",
+          "model": "FHP320",
+          "desc": "(MOB) PRESSURE FILTER FOR MOB BOAT DAVIT HPU (76CB010)",
+          "tislocationcode": "EG",
+          "exrequiredequipment": "N",
+          "bitmapcriticality": 20,
+          "updateddate": "2016-04-12 23:11:06.0",
+          "tispotitle": "LIFE BOATS",
+          "criticality": "H",
+          "area": [
+            [
+              {
+                "desc": "Area C - Cellar Deck",
+                "name": "C",
+                "key": "C^Area C - Cellar Deck"
+              },
+              {
+                "desc": "Area C10 - Utility Area",
+                "name": "C10",
+                "key": "C10^Area C10 - Utility Area"
+              },
+              {
+                "desc": "Area C11 - Utility Cellar Deck",
+                "name": "C11",
+                "key": "C11^Area C11 - Utility Cellar Deck"
+              }
+            ]
+          ],
+          "isfunctionblock": "N",
+          "dryweight": "15 kg",
+          "path": "Edvard_Grieg_Field/Edvard_Grieg/Equipment/MiscellaneousMechanical/NonRegenFilter/76CB010",
+          "length": "420 mm",
+          "equipmentwm": "FILTER HOUSING, PRESSURE,G1.1/2\",MP FILTRI,FHP320-4-BA-G2",
+          "statusisactive": "YES",
+          "discipline": "S",
+          "norwegiandescription": "Trykkfilter Hydraulikkpakke MOB Båt Davit",
+          "statusdesc": "Active",
+          "hasbarriers": 0,
+          "istypeofresource": [
+            {
+              "category": "Resources",
+              "assettag": "10047800",
+              "path": "Resources/10047800",
+              "class": [
+                "Resource",
+                "AssetObject"
+              ]
+            }
+          ],
+          "site": "V101",
+          "lastupdateagent": "no-osvm-eigmt.nor.root.lundin.lan:ENIPushToElasticSearch",
+          "documents": [
+            {
+              "category": "Unknown",
+              "typelabel": "Data Sheet",
+              "description": "EQUIPMENT DATA SHEETS RESCUE BOAT SYSTEM - DAVIT WITH RESCUE BOAT EQUIPMENT CABINET",
+              "filename": "23380E-KVEST-101-R-DS-00004",
+              "type": "DS",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-101-R-DS-00004"
+            },
+            {
+              "category": "Unknown",
+              "typelabel": "Piping and instrumentation diagram (P&ID)",
+              "description": "HYDRAULIC DIAGRAM D-5000 DAVIT/WINCH  RESCUEBOAT SYSTEM",
+              "filename": "23380E-KVEST-101-P-XB-76-00001.001",
+              "type": "XB",
+              "url": "http://avevanet.edw.nor.root.lundin.lan/#/item/EG%7CDOC%7C23380E-KVEST-101-P-XB-76-00001.001"
+            }
+          ],
+          "statusaveva": "Active",
+          "hassetpoints": "NO",
+          "updatedbyuserlogon": "WDAUA",
+          "history": [],
+          "typeoftag": "STANDARD",
+          "iscategorysetpointenabled": "NO",
+          "isrelatedtoequipment": [
+            {
+              "category": "HydraulicUnit",
+              "assettag": "76CT004",
+              "path": "Edvard_Grieg_Field/Edvard_Grieg/Equipment/MiscellaneousMechanical/HydraulicUnit/76CT004",
+              "class": [
+                "Package",
+                "MainEquipment",
+                "LundinEquipment",
+                "LundinAssetObject",
+                "AssetObject"
+              ]
+            }
+          ],
+          "originalpo": "ES101",
+          "statuslastchanged": "2016-04-12 23:11:06.0",
+          "globalidentifier": 1000000000249599,
+          "maintagnumber": "76SB004",
+          "tislocationname": "Edvard Grieg",
+          "categoryname": "MISCELLANEOUS MECHANICAL EQUIPMENT (NORSOK, M ADD. DUE TO C/cabl",
+          "producer": "MP FILTRI",
+          "subsystem": "7603-01",
+          "isownedbyproject": "NO",
+          "ponumber": "ES101",
+          "installationdate": "2015.11.28"
+        },
+        "assettag": "76CB010"
+      },
+      "_score": 12.225663
+    }
+  ],
+  "tzoffset": 3600000
+}
