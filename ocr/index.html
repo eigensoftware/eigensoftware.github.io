@@ -19,7 +19,7 @@
 <body>
 
 	<div id="commonmenu"></div>
-
+	<!-- loading indicator -->
 	<div class="loading-holder">
 		<div class="top-area">
 			<div class="loading-bar">
@@ -30,57 +30,120 @@
 	</div>
 
 
+	<!-- dark blue tab  -->
+	<div class="tabbable tabs-below" id="default_menu">
+		<div class="tab-content">
+			<div class="tab-pane" id="settings"></div>
+			<div class="tab-pane" id="searchpanel">
+				<div class="tc-holder">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+								<img src="images/logo.jpg" class="logo"/>
+								<hr/>
+							</div>
+							<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+								<div class="imagearea">
+									<p class="instructions">Select Image</p>
+									<div class="bordered images-holder">
+										<label for="cameraInput" class="lbl">
+											<i class="fa fa-cloud-upload"></i> Take/Upload Image
+										</label>
+										<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" accept="image/x-png,image/jpeg" />
+									</div>
+									<div class="bordered canvas">
 
-	<div class="tc-holder">
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
-					<img src="images/logo.jpg" class="logo"/>
-					<hr/>
-				</div>
-				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
-					<p class="instructions">Select Image</p>
-					<div class="bordered images-holder">
-						<label for="cameraInput" class="lbl">
-							<i class="fa fa-cloud-upload"></i> Take/Upload Image
-						</label>
-						<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" accept="image/x-png,image/jpeg" />
+									</div>
+									<div class="hold">
+										<label class="radio-inline">
+											<input type="radio" name="ocr" value="offline">Offline OCR
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="ocr" value="online" checked="checked">Online OCR
+										</label>
+									</div>
+
+									<div class="ocr_result">
+
+										<hr/>
+										<p class="obf">Objects Found</p>
+										<p id="status"></p>
+										<code id="result"></code>
+
+									</div>
+
+
+
+								</div>
+								<div class="searcharea">
+									<p class="inst-text">Or type tag directly</p>
+									<input type="text" id="search_tag" class="form-control"/>
+								</div>
+
+
+
+							</div>
+
+							<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+								<img src="images/back.png" class="backgo"/>
+
+								<button class="go">GO</button>
+							</div>
+
+
+
+						</div>
+
 					</div>
-					<div class="bordered canvas">
-
-
-					</div>
 
 				</div>
-
-				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
-					<img src="images/back.png" class="backgo"/>
-					<div class="hold">
-						<label class="radio-inline">
-							<input type="radio" name="ocr" value="offline">Offline OCR
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="ocr" value="online" checked="checked">Online OCR
-						</label>
-					</div>
-					<button class="go">GO</button>
-				</div>
-
-				<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
-					<hr/>
-					<p class="obf">Objects Found</p>
-					<p id="status"></p>
-					<code id="result"></code>
-				</div>
-
 			</div>
+			<div class="tab-pane" id="refresh"></div>
 
 		</div>
-
-
-
+		<ul class="nav nav-tabs">
+			<li><a href="#settings" data-toggle="tab"><img src="images/setting.png" />Settings</a></li>
+			<li><a href="#searchpanel" data-toggle="tab"><img src="images/search.png" />Search</a></li>
+			<li><a href="#refresh" data-toggle="tab"><img src="images/refresh.png"/>Refresh</a></li>
+		</ul>
 	</div>
+	<!-- /end of dark blue tab -->
+	
+
+	
+	<!-- common tab -->
+	<div class="tabbable tabs-below" id="commonmenu_mobile">
+		<div class="tab-content">
+			<div class="tab-pane" id="search">
+
+			</div>
+			<div class="tab-pane" id="properties">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<p id="tag"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="sensors"></div>
+			<div class="tab-pane" id="maintenance"></div>
+			<div class="tab-pane" id="documents"></div>
+		</div>
+		<ul class="nav nav-tabs">
+			<li><a href="#search" data-toggle="tab"><img src="images/search.png" clicked="images/search-hover.png" default="images/search.png"/>Search</a></li>
+			<li><a href="#properties" data-toggle="tab"><img src="images/info.png" clicked="images/info-hover.png" default="images/info.png"/>Properties</a></li>
+			<li><a href="#sensors" data-toggle="tab"><img src="images/chart.png" clicked="images/chart-hover.png" default="images/chart.png"/>Sensors</a></li>
+			<li><a href="#maintenance" data-toggle="tab"><img src="images/tool.png" clicked="images/tool-hover.png" default="images/tool.png"/>Maintenance</a></li>
+			<li><a href="#documents" data-toggle="tab"><img src="images/doc.png" clicked="images/doc-hover.png" default="images/doc.png"/>Documents</a></li>
+		</ul>
+	</div>
+	<!-- /end of common tab -->
+
+
+	
+	<!-- ajax loading -->
 	<div class="loading-holder ajax">
 		<div class="top-area">
 			<div class="loading-bar">
@@ -97,9 +160,9 @@
 	<script type="text/javascript" src="js/exif.js"></script>
 	<script type="text/javascript" src="js/binaryajax.js"></script>
 	<script type="text/javascript" src="js/canvasResize.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-
-	<!-- Eigen CommonMenu mock -->
+	<!-- Eigen CommonMenu mock 
 	<link href="eigen/app.css" rel="stylesheet">
 	<script>
 		window.fetch = undefined; // needed for request mocking
@@ -116,9 +179,9 @@
 		};
 		const commonMenu = EigenCommonMenu(config);
 	</script>
-	<!-- -->
+	 
 
-	<!-- Opening common menu example -->
+	Opening common menu example 
 	<h2>Example Tags</h2>
 	<div>
 		<a href="" class="commonmenu">76CB010</a>
@@ -131,13 +194,13 @@
 		/*
 			Only requests for two tags are currently mocked:
 			76CB010 & 20VA001
-		*/
-		$('.commonmenu').on('click', function(event) {
-			event.preventDefault();
-			commonMenu.dispatcher.emit('commonmenu', event, `assets-${this.textContent}`);
-		});
-	</script>
-	<!-- -->
-
+			*/
+			$('.commonmenu').on('click', function(event) {
+				event.preventDefault();
+				commonMenu.dispatcher.emit('commonmenu', event, `assets-${this.textContent}`);
+				console.log(`assets-${this.textContent}`);
+			});
+		</script>
+	-->
 </body>
 </html>
