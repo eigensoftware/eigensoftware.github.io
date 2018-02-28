@@ -1441,14 +1441,17 @@ margin-top: 3vh;
    display: none;
 }
 
+.table-bordered th, .table-bordered td { border: 1px solid #ddd!important; padding: .5vh;}
+
 #commonmenu_mobile .tab-content{
-      height: 92%;
+       height: 92%;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    margin: 2vh auto;
+    padding-top: 2vh;
+    overflow-y: scroll;
 }
 
 #commonmenu_mobile .nav-tabs{
