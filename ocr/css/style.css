@@ -1310,9 +1310,22 @@ input[type=range]:focus::-ms-fill-upper {
 .bordered{
   width: 100%;
   height: min-content;
-  border: 5px dashed #f3971a;
+  border: 2px dashed #f3971a;
   padding-bottom: 1vh;
   text-align: CENTER;
+}
+.table tr td{
+  padding-bottom: 1vh;
+}
+.table{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: x-small;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .logo{
@@ -1379,7 +1392,6 @@ input[type="file"] {
   margin-top: 2vh;
   background: #0097A9;
   border: none;
-  font-size: 3vh;
   padding-right: 2vh;
   padding-left: 2vh;
   color: white;
@@ -1430,7 +1442,10 @@ margin-top: 3vh;
      cursor: pointer;
     width: 100%;
     display: block;
-    background-color: #f3971a29!important;
+    background-color: #0097a9!important;
+    margin-bottom: 1vh;
+    color: white;
+    font-size: 2vh;
 }
 
 #result span:hover{
@@ -1441,7 +1456,9 @@ margin-top: 3vh;
    display: none;
 }
 
-.table-bordered th, .table-bordered td { border: 1px solid #ddd!important; padding: .5vh;}
+.table-bordered th, .table-bordered td { padding: .5vh;}
+.table-bordered td:nth-child(1) { text-align: right;padding-right: 1vh;}
+.table-bordered td:nth-child(2) { text-align: left;padding-left: 1vh;}
 
 #commonmenu_mobile .tab-content{
        height: 92%;
@@ -1506,7 +1523,7 @@ margin-top: 3vh;
 
 .nav-tabs>li>a{
          color: white!important;
-    font-size: xx-small;
+    font-size: 1.2vh;
     margin: 0 auto;
     display: inline-block;
 }
@@ -1520,4 +1537,15 @@ margin-top: 3vh;
 .nav-tabs>li>a:hover{
   background-color: transparent!important;
   border: none!important;
+}
+
+
+#properties_data tr td:nth-child(1){
+  text-align: right;
+  padding-right: 1vh;
+}
+
+#properties_data tr td:nth-child(2){
+  text-align: left;
+  padding-left: 1vh;
 }

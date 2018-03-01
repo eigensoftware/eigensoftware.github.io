@@ -188,7 +188,7 @@
      var fillSensorData = function(){
      	$('#sensor_data').empty();
      	for (var key in sensor_data) {
-     		$('#sensor_data').append('<tr><td>'+key+'</td><td>'+sensor_data[key]+'</td></tr>');
+     		$('#sensor_data').append('<tr><td>'+sensor_data[key]+'</td></tr>');
 
      	}
      	
