@@ -1388,13 +1388,15 @@ input[type="file"] {
 }
 
 .go{
-  float: right;
-  margin-top: 2vh;
-  background: #0097A9;
-  border: none;
-  padding-right: 2vh;
-  padding-left: 2vh;
-  color: white;
+    float: right;
+    margin-top: 2vh;
+    background: #0097A9;
+    border: none;
+    padding-right: 2.5vh;
+    padding-left: 2.5vh;
+    padding-top: 1vh;
+    color: white;
+    padding-bottom: 1vh;
 }
 
 .hold{
@@ -1489,6 +1491,18 @@ margin-top: 3vh;
     font-weight: bold;
 }
 
+
+#search_tag{
+  
+      height: 5vh;
+    padding-left: 4vh;
+    background-repeat: no-repeat;
+    background-position-y: 1.2vh;
+    background-position-x: .8vh;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVDhP5ZI9C4MwEIb7//+BEDgICA6C4OQgBJy6dRIEB6EgCNkEJ4e3iT2oHzH9wHbpAwfyJvfkJDnhYH4kHDVKlSAigSAQoCiBKjVGXvaxFXZnxBQYkSlBICII+22K4jM63rbHSthCSdsskVX9Y6KxR5XJSSpVy6GbpbBKp6aw0BzM0ShCe1iKihMXC6EuQtMQwukzPFu3fFd4+C+/cimUNxy6WQkNnmdzL3NYPfDmLVuhZf2wZYz80qDkKX1St3CXAfVMqq4cz3hTaGEpmctxDPmB0M/fCYEbAwZYyVKYcroAAAAASUVORK5CYII=);
+
+}
+
 #default_menu .nav-tabs{
        position: fixed;
     bottom: 0;
@@ -1503,10 +1517,11 @@ margin-top: 3vh;
 }
 
 .nav>li>a>img{
-          width: 3vh!important;
+       width: 3vh!important;
     padding-bottom: .5vh;
     display: block;
     margin: 0 auto;
+    height: 3.7vh;
 }
 
 #commonmenu_mobile .nav-tabs>li{
