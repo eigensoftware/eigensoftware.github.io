@@ -203,7 +203,7 @@
      	
      };
 
-      var fillDocumentData = function(){
+     var fillDocumentData = function(){
      	$('#document_data').empty();
      	for (var key in document_data) {
      		$('#document_data').append('<tr><td>'+key+'</td><td>'+document_data[key]+'</td></tr>');
@@ -226,7 +226,7 @@
      			}).then(function() {
      				console.log('jQuery bind complete');
      			});
-		}
+     		}
 
      		reader.readAsDataURL(input.files[0]);
      	} else {
@@ -298,8 +298,8 @@
      				$('.ocr_result').show();
      				if (ocrType === 'online') {
      					$('#status').text('Processing Text...');
-     					submitOnlineOcr(resp);
-
+     					//submitOnlineOcr(resp);
+     					submitGoogleCouldVisionAPI(resp);
      				} else {
      					$('#status').text('Processing Text 0%');
      					Tesseract.recognize(resp, {
@@ -332,7 +332,7 @@
 
      //online ocr handler
      var submitOnlineOcr = function(res) {
-
+     	
      	var formData = new FormData();
      	formData.append("base64Image", res);
          //formData.append("url", file);
@@ -395,6 +395,47 @@
          });
      };
 
+
+     var submitGoogleCouldVisionAPI = function(res){
+     	clearResult();
+     	var json = '{' +
+     	' "requests": [' +
+     	'	{ ' +
+     	'	  "image": {' +
+     	'	    "content":"' + res.replace("data:image/png;base64,", "") + '"' +
+     	'	  },' +
+     	'	  "features": [' +
+     	'	      {' +
+     	'	      	"type": "TEXT_DETECTION",' +
+     	'			"maxResults": 200' +
+     	'	      }' +
+     	'	  ]' +
+     	'	}' +
+     	']' +
+     	'}';
+
+     	$.ajax({
+     		type: 'POST',
+     		url: "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAxl51CyQapewf1VjWdzc_1xrjsakHyQqM",
+     		dataType: 'json',
+     		data: json,
+		    //Include headers, otherwise you get an odd 400 error.
+		    headers: {
+		    	"Content-Type": "application/json",
+		    },
+
+		    success: function(data, textStatus, jqXHR) {
+		    	if(data.responses[0].fullTextAnnotation){
+		    		parseTag(data.responses[0].fullTextAnnotation.text);
+		    	}
+		    	//console.log(data.responses[0].fullTextAnnotation.text);
+		    },
+		    error: function(jqXHR, textStatus, errorThrown) {
+		    	console.log('ERRORS: ' + textStatus + ' ' + errorThrown);
+		    }
+		});
+     };
+
      var cleanText = function(v) {
      	return v.trim();
      };
@@ -439,7 +480,7 @@
      			resultType = 'blob';
      		} else if (this.value == 'online') {
      			ocrType = 'online';
-     			resultType = 'canvas';
+     			resultType = 'base64';
      		}
      	});
      };
@@ -463,16 +504,16 @@
      };
 
      var croppieRotationControls = function(){
-     		$('.rotleft').click(function(){
-     			uploadCrop.croppie('rotate', -90);
-     			
-     			
-     		});
+     	$('.rotleft').click(function(){
+     		uploadCrop.croppie('rotate', -90);
 
-     		$('.rotright').click(function(){
-     			uploadCrop.croppie('rotate',90);
-     			
-     		});
+
+     	});
+
+     	$('.rotright').click(function(){
+     		uploadCrop.croppie('rotate',90);
+
+     	});
      };
 
      //resets cropping plugin when going back
