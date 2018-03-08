@@ -406,7 +406,7 @@
      	'	  },' +
      	'	  "features": [' +
      	'	      {' +
-     	'	      	"type": "TEXT_DETECTION",' +
+     	'	      	"type": "DOCUMENT_TEXT_DETECTION",' +
      	'			"maxResults": 200' +
      	'	      }' +
      	'	  ]' +
@@ -426,6 +426,7 @@
 
 		    success: function(data, textStatus, jqXHR) {
 		    	if(data.responses[0].fullTextAnnotation){
+                    $('#status').text('Tap on an object to search');
 		    		parseTag(data.responses[0].fullTextAnnotation.text);
 		    	}
 		    	//console.log(data.responses[0].fullTextAnnotation.text);
