@@ -29,19 +29,191 @@
 		</div>
 	</div>
 
+	<div class="container head">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+								<nav class="navbar navbar-inverse navbar-fixed-top">
+									<div class="navbar-header">
+										<a class="navbar-brand" href="#"><img src="images/logo.jpg" class="logo"/></a>
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<div class="navbar-collapse collapse">
+										<ul class="nav navbar-nav">
+											<li class="active"><a class="server_setup">Server Setup</a></li>
+											<li><a class="about_link">About</a></li>
+											<li><a class="logs_link">Logs</a></li>
+										</ul>
 
+									</div>
+								</nav>
+								
+							</div>
+		</div>
+
+	</div>
 	<!-- dark blue tab  -->
 	<div class="tabbable tabs-below" id="default_menu">
 		<div class="tab-content">
-			<div class="tab-pane" id="settings"></div>
+			<div class="tab-pane" id="settings">
+				<div class="settings">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group text-left">
+									<label class="form-label">Search API</label>
+									<input type="text" name="elastic_url" readonly="" class="form-control" />
+								</div>
+								<div class="form-group text-left">
+									<label class="form-label">Common Menu API</label>
+									<input type="text" name="common_menu_url" readonly="" class="form-control" />
+								</div>
+								<div class="form-group text-left">
+									<label class="form-label">Trend API</label>
+									<input type="text" name="trend_url" readonly="" class="form-control" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 text-left">
+								<div class="qr_scan">
+									<input type="file" capture="camera" accept="image/*" id="qrInput" name="qrInput" accept="image/x-png,image/jpeg" />
+									<img src="images/qr.png" class="triggerQR"/>
+									<p>Scan QR code</p>
+								</div>
+								
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12 text-right">
+								<button class="btn save_url_data">Save</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="about">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+								<h4><b>Logs</b></h4>	
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<p>Mobile search & common menu api</p>
+								<small>support@eigen.co</small>
+								<small>www.eigen.co</small>
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+
+				<div class="logs">
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+								<h4><b>Logs</b></h4>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-4 text-right nopadright">
+								<img src="images/smile.png" class="log_icon"/>	
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8 text-left">
+								<p class="log_item">App logs</p>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-4 text-right nopadright">
+								<img src="images/error.png" class="log_icon"/>	
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8 text-left">
+								<p class="log_item">Error logs</p>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-4 text-right nopadright">
+								<img src="images/copy.png" class="log_icon"/>	
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8 text-left">
+								<p class="log_item">Copy to clipboard</p>	
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-4 text-right nopadright">
+								<img src="images/email.png" class="log_icon"/>	
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8 text-left">
+								<p class="log_item">Email Logs</p>	
+							</div>
+						</div>
+							
+							
+						</div>
+						
+
+					
+				</div>
+
+
+
+				<div class="scan_ok">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+								<h3>Scan Complete</h3>
+								<button class="btn scn_complete">Done</button>
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+
+				<div class="scan_ongoing">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h3>Scanning...</h3>
+								
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+
+				<div class="scan_failed">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h3>Invalid</h3>
+								<p>The server settings could not be determined or an invalid QR code was scanned. </p>
+								<button class="btn try_again">Try Again</button>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12 text-right">
+								<button class="btn cancel">Cancel</button>
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+
+
+			</div>
 			<div class="tab-pane" id="searchpanel">
 				<div class="tc-holder">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
-								<img src="images/logo.jpg" class="logo"/>
-								
-							</div>
+							
+							
+							
 							<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
 								<div class="imagearea">
 									<p class="instructions">Select Image</p>
@@ -54,155 +226,182 @@
 									<div class="bordered canvas">
 
 
-											
+
 									</div>
 									<!-- <button class="rotleft">Rotate Left</button>
-									<button class="rotright">Rotate Right</button> -->
-									<div class="hold">
-										<label class="radio-inline">
-											<input type="radio" name="ocr" value="offline">Offline OCR
-										</label>
-										<label class="radio-inline">
-											<input type="radio" name="ocr" value="online" checked="checked">Online OCR
-										</label>
+										<button class="rotright">Rotate Right</button> -->
+										<div class="hold">
+											<label class="radio-inline">
+												<input type="radio" name="ocr" value="offline">Offline OCR
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="ocr" value="online" checked="checked">Online OCR
+											</label>
+										</div>
+
+
+
+
+
+									</div>
+									<div class="searcharea">
+										<p class="inst-text">Or type tag directly</p>
+										<input type="text" id="search_tag" class="form-control" placeholder="Type tag here" />
 									</div>
 
-									<div class="ocr_result">
 
+
+								</div>
+
+								<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+									<div class="ocr_result">
 										<hr/>
 										<p class="obf">Objects Found</p>
 										<p id="status"></p>
-										<code id="result"></code>
-
 									</div>
 
 
+								</div>
+								<div class="col-md-12 col-sm-12 col-xs-12"> 
+									<code id="result"></code>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6"> 
+									<img src="images/back.png" class="backgo"/>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6"> 
+									<button class="go">GO</button>
+								</div>
 
-								</div>
-								<div class="searcharea">
-									<p class="inst-text">Or type tag directly</p>
-									<input type="text" id="search_tag" class="form-control" placeholder="Type tag here" />
-								</div>
+
 
 
 
 							</div>
 
-							<div class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
-								<img src="images/back.png" class="backgo"/>
+						</div>
 
-								<button class="go">GO</button>
+					</div>
+				</div>
+				<div class="tab-pane" id="refresh"></div>
+
+			</div>
+			<ul class="nav nav-tabs">
+				<li><a href="#settings" data-toggle="tab"><img src="images/setting.png" />Settings</a></li>
+				<li><a href="#searchpanel" data-toggle="tab"><img src="images/search.png" />Search</a></li>
+				<li><a href="#refresh" class="reload"><img src="images/refresh.png"/>Refresh</a></li>
+			</ul>
+		</div>
+		<!-- /end of dark blue tab -->
+
+
+
+		<!-- common tab -->
+		<div class="tabbable tabs-below" id="commonmenu_mobile">
+			<div class="tab-content">
+				<div class="tab-pane" id="search">
+
+				</div>
+				<div class="tab-pane" id="properties">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<p id="tag"></p>
+								<table class="table" id="properties_data">
+
+
+								</table>
 							</div>
-
-
-
 						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="sensors">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<table class="table" id="sensor_data">
 
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="maintenance">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<table class="table" id="maintenance_data">
+
+
+								</table>
+							</div>
+						</div>
 					</div>
 
 				</div>
-			</div>
-			<div class="tab-pane" id="refresh"></div>
+				<div class="tab-pane" id="documents">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<table class="table" id="document_data">
 
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="nav nav-tabs">
+				<li><a href="#search" data-toggle="tab"><img src="images/search.png" clicked="images/search-hover.png" default="images/search.png"/>Search</a></li>
+				<li><a href="#properties" data-toggle="tab"><img src="images/info.png" clicked="images/info-hover.png" default="images/info.png"/>Properties</a></li>
+				<li><a href="#sensors" data-toggle="tab"><img src="images/chart.png" clicked="images/chart-hover.png" default="images/chart.png"/>Sensors</a></li>
+				<li><a href="#maintenance" data-toggle="tab"><img src="images/tool.png" clicked="images/tool-hover.png" default="images/tool.png"/>Maintenance</a></li>
+				<li><a href="#documents" data-toggle="tab"><img src="images/doc.png" clicked="images/doc-hover.png" default="images/doc.png"/>Documents</a></li>
+			</ul>
 		</div>
-		<ul class="nav nav-tabs">
-			<li><a href="#settings" data-toggle="tab"><img src="images/setting.png" />Settings</a></li>
-			<li><a href="#searchpanel" data-toggle="tab"><img src="images/search.png" />Search</a></li>
-			<li><a href="#refresh" data-toggle="tab"><img src="images/refresh.png"/>Refresh</a></li>
-		</ul>
-	</div>
-	<!-- /end of dark blue tab -->
-	
-
-	
-	<!-- common tab -->
-	<div class="tabbable tabs-below" id="commonmenu_mobile">
-		<div class="tab-content">
-			<div class="tab-pane" id="search">
-
-			</div>
-			<div class="tab-pane" id="properties">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<p id="tag"></p>
-							<table class="table" id="properties_data">
+		<!-- /end of common tab -->
 
 
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tab-pane" id="sensors">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<table class="table" id="sensor_data">
 
-
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tab-pane" id="maintenance">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<table class="table" id="maintenance_data">
-
-
-							</table>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="tab-pane" id="documents">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<table class="table" id="document_data">
-
-
-							</table>
-						</div>
-					</div>
+		<!-- ajax loading -->
+		<div class="loading-holder ajax">
+			<div class="top-area">
+				<div class="loading-bar">
+					<img src="images/loading.png" class="rotating" />
+					<p class="p-serif">Loading</p>
 				</div>
 			</div>
 		</div>
-		<ul class="nav nav-tabs">
-			<li><a href="#search" data-toggle="tab"><img src="images/search.png" clicked="images/search-hover.png" default="images/search.png"/>Search</a></li>
-			<li><a href="#properties" data-toggle="tab"><img src="images/info.png" clicked="images/info-hover.png" default="images/info.png"/>Properties</a></li>
-			<li><a href="#sensors" data-toggle="tab"><img src="images/chart.png" clicked="images/chart-hover.png" default="images/chart.png"/>Sensors</a></li>
-			<li><a href="#maintenance" data-toggle="tab"><img src="images/tool.png" clicked="images/tool-hover.png" default="images/tool.png"/>Maintenance</a></li>
-			<li><a href="#documents" data-toggle="tab"><img src="images/doc.png" clicked="images/doc-hover.png" default="images/doc.png"/>Documents</a></li>
-		</ul>
-	</div>
-	<!-- /end of common tab -->
 
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src='js/tesseract.js'></script>
+		<script type="text/javascript" src="js/croppie.min.js"></script>
+		<script type="text/javascript" src="js/exif.js"></script>
+		<script type="text/javascript" src="js/binaryajax.js"></script>
+		<script type="text/javascript" src="js/canvasResize.js"></script>
+		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 
-	
-	<!-- ajax loading -->
-	<div class="loading-holder ajax">
-		<div class="top-area">
-			<div class="loading-bar">
-				<img src="images/loading.png" class="rotating" />
-				<p class="p-serif">Loading</p>
-			</div>
-		</div>
-	</div>
+		<script type="text/javascript" src="js/qr/grid.js"></script>
+		<script type="text/javascript" src="js/qr/version.js"></script>
+		<script type="text/javascript" src="js/qr/detector.js"></script>
+		<script type="text/javascript" src="js/qr/formatinf.js"></script>
+		<script type="text/javascript" src="js/qr/errorlevel.js"></script>
+		<script type="text/javascript" src="js/qr/bitmat.js"></script>
+		<script type="text/javascript" src="js/qr/datablock.js"></script>
+		<script type="text/javascript" src="js/qr/bmparser.js"></script>
+		<script type="text/javascript" src="js/qr/datamask.js"></script>
+		<script type="text/javascript" src="js/qr/rsdecoder.js"></script>
+		<script type="text/javascript" src="js/qr/gf256poly.js"></script>
+		<script type="text/javascript" src="js/qr/gf256.js"></script>
+		<script type="text/javascript" src="js/qr/decoder.js"></script>
+		<script type="text/javascript" src="js/qr/qrcode.js"></script>
+		<script type="text/javascript" src="js/qr/findpat.js"></script>
+		<script type="text/javascript" src="js/qr/alignpat.js"></script>
+		<script type="text/javascript" src="js/qr/databr.js"></script>
 
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src='js/tesseract.js'></script>
-	<script type="text/javascript" src="js/croppie.min.js"></script>
-	<script type="text/javascript" src="js/exif.js"></script>
-	<script type="text/javascript" src="js/binaryajax.js"></script>
-	<script type="text/javascript" src="js/canvasResize.js"></script>
-	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	<!-- Eigen CommonMenu mock 
 	<link href="eigen/app.css" rel="stylesheet">
 	<script>

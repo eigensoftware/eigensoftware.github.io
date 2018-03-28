@@ -5,163 +5,20 @@
 
  _app.Module = function() {
 
+    var elastic_search_url = "https://lnopt.nor.root.lundin.lan/ei-applet/search?cmd=DODIRECTSEARCH&clientname=elasticsearch-prod&index=assetmodel&search=";
+    var common_menu_api_url = "https://lnopt.nor.root.lundin.lan/ei-applet/commonmenu?cmd=GETMENU&assetpath=";
+    var trend_api_url = "https://lnopt.nor.root.lundin.lan/historian-servlet/trend2";
+
  	var uploadCrop;
  	var resultType = 'canvas';
  	var ocrType = 'online';
  	var serach_mode = null;
  	var temp_data = null;
- 	var properties_data = {
- 		'Code':'21PA001A',
- 		'Description':'CRUDE OIL BOOSTER PUMP (21PA001A)',
- 		'System':'System 21 - Crude handling and metering',
- 		'Area':'Area C32 - Process Mezzanine Deck',
- 		'Fire area':'-',
- 		'P&IDs':'P&ID LOCAL SEAL PANEL 21PA001A/B PROCESS P&ID CRUDE OIL BOOSTER PUMPS',
- 		'ACE links':'None',
- 		'Created':'15th Nov 2017 01:01:26 CET',
- 		'Last updated':'15th Nov 2017 03:14:00 CET',
- 		'Barrier of':'None',
- 		'Active':'',
- 		'Areaname':'PROCESS MEZZANINE DECK',
- 		'Bitmapcriticality':20,
- 		'Categoryaveva':'Equipment',
- 		'Categorycode':'P',
- 		'Categoryname':'PUMPS (NORSOK)',
- 		'Component':'PUMP, CENTRIFUGAL',
- 		'Contentweight':'34 kg',
- 		'Contractor':'AET',
- 		'Contractorcode':'AET',
- 		'Contractorname':'AKER ENGINEERING',
- 		'Costcode':'PL338-6220-221-0-',
- 		'Createddate':'2014-10-27 19:30:45.0',
- 		'Criticality':'H',
- 		'Discipline':'R',
- 		'Dryweight':'5630 kg',
- 		'Equiphistoryrequired':'YES',
- 		'Equipmentwm':'PUMP,CENTRIFUGAL, EXC,M PUMPS,CN-MV-12X10X20',
- 		'Exequipmentisrequired':'NO',
- 		'Exitem':'N',
- 		'Exrequiredequipment':'N',
- 		'Functioncode':'PA',
- 		'Functioncodedesc':'CENTRIFUGAL PUMPS',
- 		'Globalidentifier':1000000000192324,
- 		'Hasactiveprograms':2,
- 		'Hasbarriers':0,
- 		'Hasexplosionprotect':'NO',
- 		'Hassetpoints':'NO',
- 		'Hassetpointsoftypecpsr':'NO',
- 		'Hasworkorders':'',
- 		'Height':'1400 mm',
- 		'Highestcriticality':'HIGH',
- 		'Installationdate':'2015.11.28',
- 		'Iscategorysetpointenabled':'NO',
- 		'Isfunctionblock':'Y',
- 		'Isownedbyproject':'NO',
- 		'Length':'2000 mm',
- 		'Location':0,
- 		'Maintagnumber':'21PA001A',
- 		'Manufacturer':'M PUMPS',
- 		'Manufacturerpartnumber':'CN-MV-12X10X20',
- 		'Model':'CN-MV-12X10X20',
- 		'Name':'21PA001A',
- 		'Norwegiandescription':'Trykkøknings Pumpe for Råolje',
- 		'Originalpo':'ER300',
- 		'Partnumber':'CN-MV-12X10X20',
- 		'Ponumber':'ER300',
- 		'Prevailcomponentname':'CENTRIFUGAL',
- 		'Producer':'M PUMPS',
- 		'Projectreference':'C000227',
- 		'Safetycriticalelement':'N',
- 		'Serialnumber':'001/13-29B',
- 		'Site':'KST',
- 		'Statusaveva':'Active',
- 		'Statusdesc':'Active',
- 		'Statusisactive':'YES',
- 		'Statuslastchanged':'2016-05-13 12:22:28.0',
- 		'Statusval':200,
- 		'Subsystem':'2101-01',
- 		'Supplier':'DELTA-P',
- 		'Systemname':'CRUDE HANDLING AND METERING',
- 		'Tis_io':'ER300',
- 		'Tislocationcode':'EG',
- 		'Tislocationname':'Edvard Grieg',
- 		'Tispotitle':'PROCESS & UTILITY PUMPS',
- 		'Typeaveva':'CENTRIFUGAL',
- 		'Typeoftag':'STANDARD',
- 		'Updatedbyuserlogon':'MBROCKERMANN',
- 		'Updatedbyusername':'Morten Brockermann',
- 		'Updateddate':'2016-05-13 12:22:28.0',
- 		'Width':'1400 mm',
- 		'Workmateresource':30003348
- 	};
 
- 	var sensor_data = [
- 	'EG_21PA001A_OUT_EX_HEAD',
- 	'EG_21PA001A_OUT_EX_EFF',
- 	'EG_21PA001A_OUT_LOADNo data',
- 	'EG_21PA001A.UNSUCC_STARTS',
- 	'EG_21PA001A_OUT_EX_POWER',
- 	'EG_21PA001A.BCL',
- 	'EG_21PA001A.ATTEMPT_STARTS',
- 	'EG_21PA001A_OUT_NPSHR',
- 	'EG_21PA001A.S1ALM',
- 	'EG_21PA001A.BO',
- 	'EG_21PA001A.SUCCESS_STOPS',
- 	'EG_21PA001A_MPOW',
- 	'EG_21PA001A.ABNORMAL_STOPS',
- 	'EG_21PA001A.Y',
- 	'EG_21PA001A_OUT_NPSHA',
- 	'EG_21PA001A.RUNNING_HOURS',
- 	'EG_21PA001A.SUCCESS_STARTS',
- 	'EG_21PA001A_OUT_NPSHD',
- 	'EG_21PA001A.BA'
-
- 	];
-
- 	var maintenance_data = {
- 		'PWO-1004852': 'OLJESKIFT TRYKKØKNINGSPUMPE A FOR RÅOLJE (5000 [hour])',
- 		'CWO-1003340': 'SCN3850 OLJE BOOSTER PUMPE DUTY/STANDBY SART',
- 		'CWO-1000716': 'VIBRASJON I CRUDE OIL BOOSTER PUMP 21PA001A',
- 		'PWO-1003339': 'TRYKKØKNINGSPUMPE A FOR RÅOLJE (12 [month])',
- 		'PWO-1007561': 'TRYKKØKNINGSPUMPE A FOR RÅOLJE (12 [month])'
- 	};
-
- 	var document_data = {
- 		'Analysis, test and calculation':'CURVES AND TABLES',
- 		'Certificates':'CERTIFICATE OF CONFORMITY (COC), M PUMPS\nLIFTING EQUIPMENT CERTIFICATES - ER300 PROCESS, UTILITY & MISC. PUMPS\nPRESSURE TEST CERTIFICATES, M PUMPS',
- 		'Data Sheet':'CHEMICAL INVENTORY AND SAFETY DATA SHEETS\nMAIN EQUIPMENT DATASHEETS, 21PA001A/B\nNOISE DATA SHEETS, M PUMPS\nPROCESS DATASHEET - ER300 PROCESS & UTILITY PUMPS',
- 		'Detail cross sectional drawings':'DETAIL/CROSS-SECTION DRAWING W/PARTS LISTS, 21PA001A/B',
- 		'Final documentation Index, Table of content and standard documentation':'FINAL DOCUMENTATION LIST OF CONTENT - PROCESS, UTILITY & MISC PUMPS',
- 		'General Arrangement & capacity plan':'GENERAL ARRANGEMENT DRAWING 21PA001A/B CRUDE OIL BOOSTER PUMPS\nGENERAL ARRANGEMENT DRAWINGS WALL MOUNTED SEAL PANEL',
- 		'ISO metric drawing, incl. Fabr. heat tracing, stress and pressure testing':'HEAT TRACE ISOMETRIC SYSTEM 21 CRUDE HANDLING AND METERING\nHEAT TRACE ISOMETRIC SYSTEM 21 CRUDE HANDLING AND METERING\nHEAT TRACE ISOMETRIC SYSTEM 21 CRUDE HANDLING AND METERING\nHEAT TRACE ISOMETRIC SYSTEM 21 CRUDE HANDLING AND METERING',
-
-
- 		'List, registers and indexes':'ATEX SCHEDULE, M PUMPS\nCONSUMPTION DATA (UTILITIES, ELECTRICAL & HVAC)\nLUBRICATION CHART AND INDEX\nSUPPLIER/SUB-SUPPLIERS CONTACTS LIST',
- 		'Location drawings (plot plans)':'PLOT PLAN MEZZANINE DECK',
-
- 		'Logic diagram':'SYSTEM CONTROL DIAGRAM CRUDE OIL BOOSTER PUMPS',
-
- 		'Operation and Maintenance Manual':'MATERIAL HANDLING, M PUMPS\nOPERATION AND MAINTENANCE MANUAL, M PUMPS',
-
- 		'Piping and instrumentation diagram (P&ID)':'P&ID LOCAL SEAL PANEL 21PA001A/B\nPROCESS P&ID CRUDE OIL BOOSTER PUMPS',
-
- 		'Report':'MATERIAL HANDLING REPORT',
-
- 		'Spare parts list':'SPARE PARTS LIST & INTERCHANGEABILITY RECORD (SPLIR) - PROCESS, UTILITY AND MISCELLANEOUS PUMPS',
-
- 		'Statutory Certificates (NMD, Class etc.)':'EX CERTIFICATES, M PUMPS',
-
- 		'System topology and block diagrams':'INSTRUMENT BLOCK DIAGRAM 21PA001 A/B\nINSTRUMENT BLOCK DIAGRAM 21PA001A ACCELEROMETER',
-
- 		'Technical Procedures (Incl. Comm. manual and procedures)':'COMMISSIONING AND START-UP PROCEDURES, M PUMPS\nINSTALLATION PROCEDURE, M PUMPS\nINSTALLATION PROCEDURE, NOISE HOOD\nSURFACE PREPARATION AND COATING PROCEDURE, SL?TTLAND\nSURFACE PREPARATION AND COATING PROCEDURES, M PUMPS\nTECHNICAL AND FUNCTIONAL DESCRIPTION, M PUMPS',
-
- 		'Wiring/Tremination diagrams':'INSTRUMENT DIAGRAM ACCELEROMETER 21PA001 A/B\nINSTRUMENT TERMINATION DIAGRAM ACCELEROMETER 21PA001AB'
-
- 	};
 
  	var init = function() {	onLoad();	setupCropper();	onFileChange();	onSearch();	onCameraInput();//croppieRotationControls();
- 		onCanvasRender();toggleOCRType();onBack();onResultClick();tabs();onTabChange();fillPropertiesData();fillSensorData();
- 		fillMaintenanceData();fillDocumentData();
+openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
+ 		onCanvasRender();toggleOCRType();onBack();onResultClick();tabs();onTabChange();
  	};
 
      //initial ui stuff
@@ -176,40 +33,75 @@
      };
 
 
-     var fillPropertiesData = function(){
+     var fillPropertiesData = function(properties){
      	$('#properties_data').empty();
-     	for (var key in properties_data) {
-     		$('#properties_data').append('<tr><td>'+key+'</td><td>'+properties_data[key]+'</td></tr>');
+        if(properties != undefined && properties.length != 0){
+         	for (var key in properties) {
+                if(!(properties[key] instanceof Array)){
+                    $('#properties_data').append('<tr><td>'+key+'</td><td>'+properties[key]+'</td></tr>');
+                }
 
-     	}
-     	
+
+         	}
+         }else{
+            $('#properties_data').html('<tr><td style="text-align:center">No properties data available for this tag</td></tr>');
+         }
+
      };
 
-     var fillSensorData = function(){
+     var fillSensorData = function(sensors){
      	$('#sensor_data').empty();
-     	for (var key in sensor_data) {
-     		$('#sensor_data').append('<tr><td>'+sensor_data[key]+'</td></tr>');
+        if(sensors != undefined && sensors.length != 0){
+            for (var key in sensors) {
+                $('#sensor_data').append('<tr><td>'+sensors[key].datatag[0].split('/')[1]+'</td></tr>');
+            }
+        }else{
+            $('#sensor_data').html('<tr><td style="text-align:center">No sensor data available for this tag</td></tr>');
+        }
 
-     	}
-     	
+
      };
 
-     var fillMaintenanceData = function(){
+     var fillMaintenanceData = function(maintenance){
      	$('#maintenance_data').empty();
-     	for (var key in maintenance_data) {
-     		$('#maintenance_data').append('<tr><td>'+key+'</td><td>'+maintenance_data[key]+'</td></tr>');
+        if(maintenance != undefined && maintenance.length != 0){
+         	for (var key in maintenance) {
+         		$('#maintenance_data').append('<tr><td>'+maintenance[key].workOrderNumber+': </td><td>'+maintenance[key].description+'</td></tr>');
 
-     	}
-     	
+         	}
+        }else{
+            $('#maintenance_data').html('<tr><td style="text-align:center">No maintenance data available for this tag</td></tr>');
+        }
+
      };
 
-     var fillDocumentData = function(){
+     var fillDocumentData = function(documents){
      	$('#document_data').empty();
-     	for (var key in document_data) {
-     		$('#document_data').append('<tr><td>'+key+'</td><td>'+document_data[key]+'</td></tr>');
+        if(documents != undefined && documents.length != 0){
+         	for (var key in documents) {
+         		$('#document_data').append('<tr><td>'+documents[key].typelabel+'</td><td>'+documents[key].description+'</td></tr>');
 
-     	}
-     	
+         	}
+        }else{
+            $('#document_data').html('<tr><td style="text-align:center">No document data available for this tag</td></tr>');
+        }
+
+     };
+
+     var clearTabs = function(){
+        $('#document_data').html('<tr><td style="text-align:center">No document data available for this tag</td></tr>');
+        $('#sensor_data').html('<tr><td style="text-align:center">No sensor data available for this tag</td></tr>');
+        $('#maintenance_data').html('<tr><td style="text-align:center">No maintenance data available for this tag</td></tr>');
+        $('#properties_data').html('<tr><td style="text-align:center">No properties data available for this tag</td></tr>');
+
+     };
+
+     var loadingData = function(){
+        $('#document_data').html('<tr><td style="text-align:center">Loading document data...</td></tr>');
+        $('#sensor_data').html('<tr><td style="text-align:center">Loading sensor data...</td></tr>');
+        $('#maintenance_data').html('<tr><td style="text-align:center">Loading maintenance data...</td></tr>');
+        $('#properties_data').html('<tr><td style="text-align:center">Loading properties data...</td></tr>');
+
      };
 
      //reads uploaded file and update croppie
@@ -237,7 +129,7 @@
      //sets up the croppie plugin
      var setupCropper = function() {
      	uploadCrop = $('.canvas').croppie({
-     		
+
      		viewport: {
      			width: '80%',
      			height: '45vh',
@@ -249,7 +141,7 @@
      		},
      		enableExif: true,
      		enforceBoundary: true
-     		
+
      	});
      };
 
@@ -267,6 +159,39 @@
      	});
      };
 
+
+     var openQRScan = function(){
+        $('.triggerQR').on('click', function(event) {
+            $('#qrInput').trigger('click');
+        });
+
+     };
+
+     var onQRChange = function(){
+        $('#qrInput').on('change', function() {
+            $('.settings').hide();
+            $('.scan_ongoing').show();
+            readQRFile(this);
+        });
+
+     };
+
+     var readQRFile = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                //temp_data = e.target.result;
+                scanQRCode(e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            alert("Sorry - you're browser doesn't support the FileReader API");
+        }
+     };
+
+
      //event for the serach tag
      var onSearch = function() {
      	$("#search_tag").focus(function() {
@@ -281,13 +206,17 @@
      	$('#cameraInput').on('click', function(event) {
      		event.target.value = null;
      	});
+
+        $('#qrInput').on('click', function(event) {
+            event.target.value = null;
+        });
      };
 
      //go button event handler
      //added white list characters
      var onCanvasRender = function() {
      	$('.go').on('click', function(ev) {
-
+            tagCount = 0;
      		if (serach_mode === 'ocr') {
      			$('#status').text('');
      			uploadCrop.croppie('result', {
@@ -295,10 +224,13 @@
      				size: 'viewport'
      			}).then(function(resp) {
      				console.log(resp);
+
+                    loadingData();
      				$('.ocr_result').show();
      				if (ocrType === 'online') {
      					$('#status').text('Processing Text...');
      					//submitOnlineOcr(resp);
+                        //scanQRCode(resp);
      					submitGoogleCouldVisionAPI(resp);
      				} else {
      					$('#status').text('Processing Text 0%');
@@ -310,6 +242,7 @@
      						$('#status').text('Processing Text ' + Math.ceil(p.progress * 100) + '%');
      					})
      					.then(function(result) {
+                            c = 0;
      						$('#status').text('Tap on an object to search');
      						clearResult();
      						parseTag(result.text);
@@ -319,11 +252,13 @@
 
      			});
      		} else if (serach_mode === 'type') {
-
-     			$('#commonmenu_mobile .nav-tabs a[href="#properties"]').tab('show');
-     			prev = $('#commonmenu_mobile .nav-tabs a[href="#properties"]').find("img");
-     			$('#tag').text($('#search_tag').val());
-     			showCommonUI();
+                clearResult();
+                loadingData();
+     			var tag = $('#search_tag').val();
+                parseTag(tag);
+                $('.ocr_result').show();
+     			//$('#tag').text($('#search_tag').val());
+     			//showCommonUI();
      		}
 
      	});
@@ -332,7 +267,7 @@
 
      //online ocr handler
      var submitOnlineOcr = function(res) {
-     	
+
      	var formData = new FormData();
      	formData.append("base64Image", res);
          //formData.append("url", file);
@@ -349,6 +284,7 @@
          	processData: false,
          	type: 'POST',
          	success: function(ocrParsedResult) {
+
          		$('#status').text('Tap on an object to search');
          		clearResult();
                  //Get the parsed results, exit code and error message and details
@@ -441,6 +377,8 @@
      	return v.trim();
      };
 
+     var tagCount = 0;
+     var temp_result = null;
      //added 4 types of regex parsing
      var parseTag = function(tag) {
          //for main quipment
@@ -458,14 +396,27 @@
 
          	console.log(cleantext[i].trim());
          	if (regx.test(cleantext[i].trim())) {
+                tagCount++;
+                temp_result = cleantext[i].trim();
          		writeResult(cleantext[i].trim());
          	} else if (regx2.test(cleantext[i].trim())) {
+                tagCount++;
+                temp_result = cleantext[i].trim();
          		writeResult(cleantext[i].trim());
          	} else if (regx3.test(cleantext[i].trim())) {
+                tagCount++;
+                temp_result = cleantext[i].trim();
          		writeResult(cleantext[i].trim());
          	} else if (regx4.test(cleantext[i].trim())) {
+                tagCount++;
+                temp_result = cleantext[i].trim();
          		writeResult(cleantext[i].trim());
          	}
+         }
+
+         if(tagCount == 1){
+            showCommonUI();
+            getDataForTag(temp_result);
          }
 
 
@@ -538,16 +489,60 @@
      //on result click
      var onResultClick = function() {
      	$('#result').on('click', 'span', function() {
-     		$('#commonmenu_mobile .nav-tabs a[href="#properties"]').tab('show');
-     		prev = $('#commonmenu_mobile .nav-tabs a[href="#properties"]').find("img");
+
      		var text = $(this).text();
      		$('#tag').text(text);
+            getDataForTag(text);
              //make some api calls
-             showCommonUI();
+            showCommonUI();
          });
 
 
      };
+
+     var reload_app = function(){
+        $('.reload').on('click', function(event) {
+             $('a[href="#searchpanel"]').tab('show');
+             resetCroppie();
+            $('.images-holder').show();
+            $('.canvas').hide();
+            $('.go').hide();
+            $('.backgo').hide();
+            $('#result').text('');
+            $('#status').text('');
+            $('.searcharea').show();
+            $('.imagearea').show();
+            $('.ocr_result').hide();
+            $('.hold').hide();
+        });
+
+     };
+
+     var settings_menu_setup = function(){
+
+        $('.server_setup').on('click', function(event) {
+            $('a[href="#settings"]').tab('show');
+            $('.settings').show();
+            $('.about').hide();
+            $('.logs').hide();
+        });
+
+         $('.about_link').on('click', function(event) {
+           $('a[href="#settings"]').tab('show');
+            $('.settings').hide();
+            $('.about').show();
+            $('.logs').hide();
+        });
+
+         $('.logs_link').on('click', function(event) {
+            $('a[href="#settings"]').tab('show');
+            $('.settings').hide();
+            $('.about').hide();
+            $('.logs').show();
+        });
+
+
+     }
 
      //tab change shit
      var prev = null;
@@ -572,6 +567,8 @@
 
      };
 
+
+
      var tabs = function() {
      	$("#commonmenu_mobile").swipe({
      		swipeLeft: function(event, direction, distance, duration, fingerCount) {
@@ -584,9 +581,141 @@
      };
 
      var showCommonUI = function() {
+        $('#commonmenu_mobile .nav-tabs a[href="#properties"]').tab('show');
+        prev = $('#commonmenu_mobile .nav-tabs a[href="#properties"]').find("img");
      	$('#default_menu').hide();
      	$('#commonmenu_mobile').show();
      };
+
+     var qrSetup = function(){
+        $('.scn_complete').on('click', function(event) {
+            $('.scan_ok').hide();
+            $('.settings').show();
+        });
+
+        $('.try_again').on('click', function(event) {
+            $('.scan_failed').hide();
+            $('.settings').show();
+        });
+
+        $('.cancel').on('click', function(event) {
+            $('.scan_failed').hide();
+            $('.settings').show();
+        });
+
+        $('.save_url_data').on('click', function(event) {
+            setElasticURL($( "input[name='elastic_url']" ).val());
+            setCommonMenuURL($( "input[name='common_menu_url']" ).val());
+            setTrendURL($( "input[name='trend_url']" ).val());
+
+        });
+
+     };
+
+     var setElasticURL = function(val){
+        elastic_search_url = val;
+
+     };
+
+     var setCommonMenuURL = function(val){
+        common_menu_api_url = val;
+
+     };
+
+     var setTrendURL = function(val){
+        trend_api_url = val;
+
+     };
+
+
+     var getDataForTag = function(tag){
+
+        var json_query = {"query":{"term":{"asset.assettag.raw":tag}}};
+        $.ajax({
+            // type: 'POST',
+            // url: 'elastic_search.php',
+            type: 'GET',
+            url: 'https://lunappd.dev.lundin.eigen.co/ei-applet/search?cmd=DODIRECTSEARCH&clientname=elasticsearch-prod&index=assetmodel&search=' + encodeURIComponent(JSON.stringify(json_query)),
+            dataType: 'json',
+            data: {tag:tag},
+            success: function (data) {
+                if(data.results.length > 0){
+                    var data_set = data.results[0]._source.asset;
+                    fillPropertiesData(data_set);
+                    //getDataForCommonMenu(data_set.path);
+                    fillSensorData(data_set.history);
+                    fillMaintenanceData(data_set.hasworkorders);
+                    fillDocumentData(data_set.documents);
+                    console.log(data_set);
+                }else{
+                    clearTabs();
+                }
+            }
+        });
+     };
+
+
+
+     var getDataForCommonMenu = function(path){
+
+        // var json_query = {"query":{"term":{"asset.assettag.raw":tag}}};
+        $.ajax({
+            // type: 'POST',
+            // url: 'common_menu_api.php',
+            type: 'GET',
+            url: 'https://lunappd.dev.lundin.eigen.co/ei-applet/commonmenu?cmd=GETMENU&assetpath=' + path,
+            dataType: 'json',
+            data: {path:path},
+            success: function (data) {
+
+                console.log(data);
+                //if(data.results.length > 0){
+                    //var data_set = data.results[0]._source.asset;
+                    //fillPropertiesData(data_set);
+                    //console.log(data_set);
+
+                //}
+            }
+        });
+     };
+
+
+     var scanQRCode = function(img){
+
+          function decodeImageFromBase64(data, callback){
+                // set callback
+                qrcode.callback = callback;
+                // Start decoding
+                qrcode.decode(data)
+            }
+
+        decodeImageFromBase64(img,function(decodedInformation){
+            $('.scan_ongoing').hide();
+            if(decodedInformation != ''){
+                console.log(decodedInformation);
+                var obj;
+                try {
+                    obj = JSON.parse(decodedInformation);
+                } catch(e) {
+                    $('.scan_failed').show();
+                }
+
+
+                if(obj != undefined && obj.elastic_api != undefined && obj.common_menu_api != undefined && obj.trend_api!= undefined ){
+                    $( "input[name='elastic_url']" ).val(obj.elastic_api);
+                    $( "input[name='common_menu_url']" ).val(obj.common_menu_api);
+                    $( "input[name='trend_url']" ).val(obj.trend_api);
+                    $('.scan_ok').show();
+                }else{
+                    $('.scan_failed').show();
+                }
+
+            }
+               //alert(decodedInformation);
+         });
+
+     };
+
 
      //public functions
      var oPublic = {
