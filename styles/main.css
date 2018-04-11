@@ -3557,6 +3557,25 @@ li.active .showoff-thumb-hover {
 	}
 }
 
+.partner-logo {
+	display: flex;
+	align-items: center;
+}
+
+.partner-logo	div img {
+		width: 200px;
+		height: auto;
+		margin-right: 2rem;
+}
+
+.col-2 {
+	display: flex;
+}
+
+.col-2 > div {
+	width: 50%;
+}
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
