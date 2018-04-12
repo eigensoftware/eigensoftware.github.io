@@ -1599,13 +1599,11 @@ ul.eigen-list li {
 ul.eigen-list li:before {
 	display: block;
 	position: absolute;
-	top: 50%;
+	top: 0.6rem;
 	left: -1rem;
 	content: "";
 	width: .4rem;
 	height: .4rem;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
 	background-color: #004358
 }
 
