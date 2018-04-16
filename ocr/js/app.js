@@ -5,31 +5,36 @@
 
  _app.Module = function() {
 
-    var elastic_search_url = "https://lnopt.nor.root.lundin.lan/ei-applet/search?cmd=DODIRECTSEARCH&clientname=elasticsearch-prod&index=assetmodel&search=";
-    var common_menu_api_url = "https://lnopt.nor.root.lundin.lan/ei-applet/commonmenu?cmd=GETMENU&assetpath=";
-    var trend_api_url = "https://lnopt.nor.root.lundin.lan/historian-servlet/trend2";
+    var elastic_search_url = "https://lnop.nor.root.lundin.lan/ei-applet/search?cmd=DODIRECTSEARCH&clientname=elasticsearch-prod&index=assetmodel&search=";
+    var common_menu_api_url = "https://lnop.nor.root.lundin.lan/ei-applet/commonmenu?cmd=GETMENU&assetpath=";
+    var trend_api_url = "https://lnop.nor.root.lundin.lan/historian-servlet/trend2";
 
  	var uploadCrop;
  	var resultType = 'canvas';
  	var ocrType = 'online';
  	var serach_mode = null;
  	var temp_data = null;
-
+ 	
 
  	var init = function() {	onLoad();	setupCropper();	onFileChange();	onSearch();	onCameraInput();//croppieRotationControls();
 openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
  		onCanvasRender();toggleOCRType();onBack();onResultClick();tabs();onTabChange();
+        onMaintenanceDataClick();onDocumentDataClick();setInitialUrls();
  	};
 
      //initial ui stuff
      var onLoad = function() {
      	$('.ajax').hide();
+        $('.toggle-btn').hide();
      	$('.tc-holder').hide();
      	$('#default_menu .nav-tabs a[href="#searchpanel"]').tab('show');
      	setTimeout(function() {
      		$('.loading-holder').hide();
      		$('.tc-holder').show();
      	}, 2000);
+        Array.from(document.querySelectorAll('.watermarked')).forEach(function(el) {
+          el.dataset.watermark = (el.dataset.watermark + ' ').repeat(300);
+        });
      };
 
 
@@ -40,13 +45,11 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
                 if(!(properties[key] instanceof Array)){
                     $('#properties_data').append('<tr><td>'+key+'</td><td>'+properties[key]+'</td></tr>');
                 }
-
-
          	}
          }else{
             $('#properties_data').html('<tr><td style="text-align:center">No properties data available for this tag</td></tr>');
          }
-
+     	
      };
 
      var fillSensorData = function(sensors){
@@ -54,39 +57,72 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
         if(sensors != undefined && sensors.length != 0){
             for (var key in sensors) {
                 $('#sensor_data').append('<tr><td>'+sensors[key].datatag[0].split('/')[1]+'</td></tr>');
-            }
+            }  
         }else{
             $('#sensor_data').html('<tr><td style="text-align:center">No sensor data available for this tag</td></tr>');
         }
-
-
+     	
+     	
      };
 
+     var maintenance_data = null;
      var fillMaintenanceData = function(maintenance){
+        maintenance_data = [];
      	$('#maintenance_data').empty();
         if(maintenance != undefined && maintenance.length != 0){
          	for (var key in maintenance) {
-         		$('#maintenance_data').append('<tr><td>'+maintenance[key].workOrderNumber+': </td><td>'+maintenance[key].description+'</td></tr>');
+                maintenance_data.push(maintenance[key]);
+         		$('#maintenance_data').append('<tr index="'+key+'"><td>'+maintenance[key].workOrderNumber+': </td><td>'+maintenance[key].description+'</td></tr>');
 
          	}
         }else{
             $('#maintenance_data').html('<tr><td style="text-align:center">No maintenance data available for this tag</td></tr>');
         }
-
+     	
      };
 
      var fillDocumentData = function(documents){
      	$('#document_data').empty();
         if(documents != undefined && documents.length != 0){
          	for (var key in documents) {
-         		$('#document_data').append('<tr><td>'+documents[key].typelabel+'</td><td>'+documents[key].description+'</td></tr>');
+         		$('#document_data').append('<tr url="'+documents[key].url+'"><td>'+documents[key].typelabel+'</td><td>'+documents[key].description+'</td></tr>');
 
          	}
         }else{
-            $('#document_data').html('<tr><td style="text-align:center">No document data available for this tag</td></tr>');
+            $('#document_data').html('<tr><td style="text-align:center">No document data available for this tag</td></tr>');    
         }
-
+     	
      };
+
+
+     var onMaintenanceDataClick = function(){
+        $("#maintenance").on("click", "#maintenance_data tr", function(){
+           var element = maintenance_data[$(this).attr('index')];
+           $('#maintenance_details_table').empty();
+           if(Object.keys(element).length == 0 || element == undefined){
+
+                $('#maintenance_details_table').append('<tr><td colspan="2">No Data</td></tr>');
+
+           }else{
+                for (var key  in element) {
+                    if (element.hasOwnProperty(key)) {
+                        $('#maintenance_details_table').append('<tr><td>'+key+'</td><td>'+element[key]+'</td></tr>');
+                    }
+                }
+           }
+           
+            $('#maintenance_details').modal('show');
+
+          
+        });
+     }
+
+     var onDocumentDataClick = function(){
+        $("#documents").on("click", "#document_data tr", function(){
+           var url = $(this).attr('url');
+           window.open(url,'_blank');
+         });
+     }
 
      var clearTabs = function(){
         $('#document_data').html('<tr><td style="text-align:center">No document data available for this tag</td></tr>');
@@ -129,7 +165,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      //sets up the croppie plugin
      var setupCropper = function() {
      	uploadCrop = $('.canvas').croppie({
-
+     		
      		viewport: {
      			width: '80%',
      			height: '45vh',
@@ -141,7 +177,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      		},
      		enableExif: true,
      		enforceBoundary: true
-
+     		
      	});
      };
 
@@ -162,9 +198,9 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
 
      var openQRScan = function(){
         $('.triggerQR').on('click', function(event) {
-            $('#qrInput').trigger('click');
+            $('#qrInput').trigger('click'); 
         });
-
+        
      };
 
      var onQRChange = function(){
@@ -173,7 +209,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
             $('.scan_ongoing').show();
             readQRFile(this);
         });
-
+        
      };
 
      var readQRFile = function(input) {
@@ -198,7 +234,8 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      		serach_mode = 'type';
      		$('.imagearea').hide();
      		$('.backgo').show();
-     		$('.go').show();
+            $('.go:not(.toggle-btn)').show();
+
      	});
      };
 
@@ -224,7 +261,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      				size: 'viewport'
      			}).then(function(resp) {
      				console.log(resp);
-
+                    
                     loadingData();
      				$('.ocr_result').show();
      				if (ocrType === 'online') {
@@ -242,7 +279,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      						$('#status').text('Processing Text ' + Math.ceil(p.progress * 100) + '%');
      					})
      					.then(function(result) {
-                            c = 0;
+                            
      						$('#status').text('Tap on an object to search');
      						clearResult();
      						parseTag(result.text);
@@ -267,7 +304,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
 
      //online ocr handler
      var submitOnlineOcr = function(res) {
-
+     	
      	var formData = new FormData();
      	formData.append("base64Image", res);
          //formData.append("url", file);
@@ -284,7 +321,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
          	processData: false,
          	type: 'POST',
          	success: function(ocrParsedResult) {
-
+                
          		$('#status').text('Tap on an object to search');
          		clearResult();
                  //Get the parsed results, exit code and error message and details
@@ -324,10 +361,11 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
                      });
                  }
              },
-             error: function() {
-             	$('.ajax').hide();
-             	alert('Sorry, something went wrong. Please refresh the page');
+             error: function(XMLHttpRequest, textStatus, errorThrown) {
+                $('.ajax').hide();
+                alert('Sorry, something went wrong. Please refresh the page');
              }
+
          });
      };
 
@@ -443,7 +481,8 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      		resetCroppie();
      		$('.images-holder').show();
      		$('.canvas').hide();
-     		$('.go').hide();
+            $('.toggle-btn').hide();
+     		$('.go:not(.toggle-btn)').show();
      		$('.backgo').hide();
      		$('#result').text('');
      		$('#status').text('');
@@ -489,7 +528,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
      //on result click
      var onResultClick = function() {
      	$('#result').on('click', 'span', function() {
-
+     		
      		var text = $(this).text();
      		$('#tag').text(text);
             getDataForTag(text);
@@ -506,7 +545,8 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
              resetCroppie();
             $('.images-holder').show();
             $('.canvas').hide();
-            $('.go').hide();
+            $('.go:not(.toggle-btn)').show();
+            $('.backgo').hide();
             $('.backgo').hide();
             $('#result').text('');
             $('#status').text('');
@@ -541,7 +581,7 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
             $('.logs').show();
         });
 
-
+         
      }
 
      //tab change shit
@@ -607,38 +647,43 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
             setElasticURL($( "input[name='elastic_url']" ).val());
             setCommonMenuURL($( "input[name='common_menu_url']" ).val());
             setTrendURL($( "input[name='trend_url']" ).val());
-
+            
         });
+        
+     };
 
+
+     var setInitialUrls = function(){
+        $( "input[name='elastic_url']" ).val(elastic_search_url);
+        $( "input[name='common_menu_url']" ).val(common_menu_api_url);
+        $( "input[name='trend_url']" ).val(trend_api_url);
+        
      };
 
      var setElasticURL = function(val){
         elastic_search_url = val;
-
+        
      };
 
      var setCommonMenuURL = function(val){
         common_menu_api_url = val;
-
+        
      };
 
      var setTrendURL = function(val){
         trend_api_url = val;
-
+        
      };
 
 
      var getDataForTag = function(tag){
 
         var json_query = {"query":{"term":{"asset.assettag.raw":tag}}};
-        $.ajax({
-            // type: 'POST',
-            // url: 'elastic_search.php',
-            type: 'GET',
-            url: 'https://lunappd.dev.lundin.eigen.co/ei-applet/search?cmd=DODIRECTSEARCH&clientname=elasticsearch-prod&index=assetmodel&search=' + encodeURIComponent(JSON.stringify(json_query)),
+        $.ajax({ 
+            type: 'GET', 
+            url: elastic_search_url + encodeURIComponent(JSON.stringify(json_query)),
             dataType: 'json',
-            data: {tag:tag},
-            success: function (data) {
+            success: function (data) { 
                 if(data.results.length > 0){
                     var data_set = data.results[0]._source.asset;
                     fillPropertiesData(data_set);
@@ -650,7 +695,14 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
                 }else{
                     clearTabs();
                 }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest);
+                console.log(textStatus);
+                console.log(errorThrown);
+                clearTabs();
             }
+
         });
      };
 
@@ -658,15 +710,13 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
 
      var getDataForCommonMenu = function(path){
 
-        // var json_query = {"query":{"term":{"asset.assettag.raw":tag}}};
-        $.ajax({
-            // type: 'POST',
-            // url: 'common_menu_api.php',
-            type: 'GET',
-            url: 'https://lunappd.dev.lundin.eigen.co/ei-applet/commonmenu?cmd=GETMENU&assetpath=' + path,
+        //var json_query = {"query":{"term":{"asset.assettag.raw":tag}}};
+        $.ajax({ 
+            type: 'POST', 
+            url: 'common_menu_api.php',
             dataType: 'json',
-            data: {path:path},
-            success: function (data) {
+            data: {path:path}, 
+            success: function (data) { 
 
                 console.log(data);
                 //if(data.results.length > 0){
@@ -681,16 +731,16 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
 
 
      var scanQRCode = function(img){
-
+       
           function decodeImageFromBase64(data, callback){
                 // set callback
                 qrcode.callback = callback;
                 // Start decoding
                 qrcode.decode(data)
             }
-
+   
         decodeImageFromBase64(img,function(decodedInformation){
-            $('.scan_ongoing').hide();
+            $('.scan_ongoing').hide();   
             if(decodedInformation != ''){
                 console.log(decodedInformation);
                 var obj;
@@ -700,16 +750,16 @@ openQRScan();onQRChange();qrSetup();settings_menu_setup();reload_app();
                     $('.scan_failed').show();
                 }
 
-
+                
                 if(obj != undefined && obj.elastic_api != undefined && obj.common_menu_api != undefined && obj.trend_api!= undefined ){
                     $( "input[name='elastic_url']" ).val(obj.elastic_api);
                     $( "input[name='common_menu_url']" ).val(obj.common_menu_api);
                     $( "input[name='trend_url']" ).val(obj.trend_api);
-                    $('.scan_ok').show();
+                    $('.scan_ok').show();    
                 }else{
                     $('.scan_failed').show();
                 }
-
+                
             }
                //alert(decodedInformation);
          });

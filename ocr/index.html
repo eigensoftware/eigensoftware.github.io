@@ -111,7 +111,7 @@
 					</div>
 				</div>
 
-				<div class="logs">
+				<div class="logs watermarked" data-watermark="Future Functionality"> 
 					<div class="container">
 						<div class="row">
 							
@@ -247,6 +247,7 @@
 									<div class="searcharea">
 										<p class="inst-text">Or type tag directly</p>
 										<input type="text" id="search_tag" class="form-control" placeholder="Type tag here" />
+										<button class="go">GO</button>
 									</div>
 
 
@@ -269,7 +270,7 @@
 									<img src="images/back.png" class="backgo"/>
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-6"> 
-									<button class="go">GO</button>
+									<button class="go mar-top toggle-btn">GO</button>
 								</div>
 
 
@@ -362,7 +363,19 @@
 		</div>
 		<!-- /end of common tab -->
 
+		<div class="modal fade" id="maintenance_details" role="dialog" aria-labelledby="modalLabel" tabindex="-1" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog" role="document">
+				<div class="modal-body">
+					<table id="maintenance_details_table">
 
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal">Close</button>
+				</div>
+				
+			</div>
+		</div>
 
 		<!-- ajax loading -->
 		<div class="loading-holder ajax">

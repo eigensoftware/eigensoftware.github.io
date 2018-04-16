@@ -453,6 +453,7 @@ body {
   text-align: left;
   vertical-align: middle;
   position: relative;
+  background-color: white;
 
 }
 
@@ -484,15 +485,7 @@ body {
   margin-bottom: 3vh;
 }
 
-.modal-body{
-  position: relative;
-  padding: 0vh;
-  padding-right: 1vh;
-  padding-left: 1vh;
-  padding-bottom: 6vh;
-  border: 2px solid white;
-  border-radius: 1vh;
-}
+
 
 .mar-b{
   margin-bottom: 2vh;
@@ -1338,7 +1331,14 @@ input[type=range]:focus::-ms-fill-upper {
   text-align: CENTER;
 }
 .table tr td{
-  padding-bottom: 1vh;
+  padding-bottom: 1.5vh;
+}
+
+#maintenance_data tr td,#document_data tr td{
+  color: #337ab7;
+}
+#maintenance_details_table tr td{
+   padding-bottom: 1.5vh;
 }
 .table{
     width: 100%;
@@ -1420,7 +1420,6 @@ input[type="file"] {
 
 .go{
     float: right;
-    margin-top: 2vh;
     background: #0097A9;
     border: none;
     padding-right: 2.5vh;
@@ -1428,6 +1427,11 @@ input[type="file"] {
     padding-top: 1vh;
     color: white;
     padding-bottom: 1vh;
+}
+
+
+.mar-top{
+  margin-top: 2vh;
 }
 
 .hold{
@@ -1526,6 +1530,8 @@ margin-top: 3vh;
 #search_tag{
   
       height: 5vh;
+      width: 80%;
+    display: inline;
     padding-left: 4vh;
     background-repeat: no-repeat;
     background-position-y: 1.2vh;
@@ -1659,4 +1665,27 @@ margin-top: 3vh;
 
 .form-control{
   background-color: #fff!important;
+}
+
+
+.watermarked {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.watermarked::before {
+  position: absolute;
+    top: -75%;
+    left: -75%;
+    display: block;
+    width: 150%;
+    height: 150%;
+    transform: rotate(-45deg);
+    content: attr(data-watermark);
+    opacity: 0.7;
+    line-height: 3em;
+    letter-spacing: 2px;
+    color: #2d0202;
 }
