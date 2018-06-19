@@ -1,0 +1,25 @@
+{
+  "name": "eigensoftware.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eigensoftware/eigensoftware.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eigensoftware/eigensoftware.github.io/issues"
+  },
+  "homepage": "https://github.com/eigensoftware/eigensoftware.github.io#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
