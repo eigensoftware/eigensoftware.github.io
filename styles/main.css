@@ -3571,7 +3571,7 @@ li.active .showoff-thumb-hover {
 	justify-content: center;
 	padding-top: 6rem;
 	background-color: #004358;
-	background-image: url(/images/home/bg.jpg);
+	background-image: url(../images/home/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
@@ -3601,9 +3601,12 @@ li.active .showoff-thumb-hover {
 }
 
 @media(min-width: 1024px) {
+	#home-slider {
+		height: 100vh;
+	}
+
 	#home-slider-inner {
 		max-width: 1024px;
-		height: 100vh;
 	}
 }
 
@@ -3659,25 +3662,25 @@ li.active .showoff-thumb-hover {
 }
 
 .slider-slide-1 >div {
-	background-image: url(/images/home/1.jpg);
+	background-image: url(../images/home/1.jpg);
 	padding: 1rem;
 	text-align: center;
 }
 
 .slider-slide-2 >div {
-	background-image: url(/images/home/2.jpg);
+	background-image: url(../images/home/2.jpg);
 }
 
 .slider-slide-3 >div {
-	background-image: url(/images/home/3.jpg);
+	background-image: url(../images/home/3.jpg);
 }
 
 .slider-slide-4 >div {
-	background-image: url(/images/home/4.jpg);
+	background-image: url(../images/home/4.jpg);
 }
 
 .slider-slide-5 >div {
-	background-image: url(/images/home/5.jpg);
+	background-image: url(../images/home/5.jpg);
 }
 
 #slider-controls {
@@ -3698,7 +3701,6 @@ li.active .showoff-thumb-hover {
 
 @media(min-width: 1024px) {
 	#home-slider {
-		height: 100vh;
 	}
 
 	.slider-slide > div {
