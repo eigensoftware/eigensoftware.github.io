@@ -1939,7 +1939,7 @@ ul.job-list ul.job-list li:before {
 	}
 	.has-bg-image .primary-nav .header-logo,
 	.has-bg-image .primary-nav .main-menu-wrapper.stick .header-logo,
-	.has-bg-image .primary-nav:hover .off-canvas .header-logo {
+	.has-bg-image .primary-nav .off-canvas .header-logo {
 		background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 364.781 142.694'%3E%3Cpath fill='%23119EA6' d='M38.732 88.813c-6.328-13.922-1.69-29.59 11.636-35.646 14.62-6.645 27.917 1.23 34.245 15.152l.633 1.392-40.176 18.26c5.243 10.216 16.137 15.704 27.473 10.552C78.61 95.766 83.14 90.95 85.228 84.72l4.22 2.16c-2.51 7.143-7.312 12.683-15.268 16.3-14.022 6.372-28.713.45-35.448-14.367m13.57-31.126c-11.337 5.153-12.484 17.677-9.085 26.21L78.122 68.03c-3.806-8.11-13.787-15.812-25.82-10.343M99.64 39.415c0-2.403 2.074-4.26 4.368-4.26 2.404 0 4.37 1.857 4.37 4.26a4.383 4.383 0 0 1-4.37 4.37c-2.294 0-4.37-1.967-4.37-4.37m1.53 12.672h5.68v52.76h-5.68v-52.76zm23.488 66.196l3.277-4.588c4.588 5.462 9.613 7.43 17.587 7.43 9.504 0 17.915-4.808 17.915-16.713v-8.41c-3.714 5.46-10.487 9.938-18.352 9.938-13.983 0-23.486-10.596-23.486-27.527 0-16.714 9.503-27.637 23.486-27.637 7.537 0 14.092 3.824 18.352 9.832v-8.52h5.79v52.324c0 16.058-10.925 21.846-23.705 21.846-8.958 0-14.638-1.64-20.864-7.975m38.78-27.09v-25.67c-3.06-5.134-10.05-9.613-17.37-9.613-11.688 0-18.46 9.723-18.46 22.503s6.772 22.393 18.46 22.393c7.32 0 14.31-4.478 17.37-9.614m22.664-2.379c-6.33-13.922-1.69-29.59 11.635-35.646 14.62-6.645 27.917 1.23 34.245 15.152l.633 1.392-40.176 18.26c5.243 10.216 16.137 15.704 27.473 10.552 6.067-2.758 10.597-7.575 12.686-13.805l4.22 2.16c-2.51 7.143-7.31 12.683-15.268 16.3-14.024 6.372-28.714.45-35.45-14.367m13.57-31.126c-11.336 5.153-12.483 17.677-9.084 26.21l34.904-15.867c-3.805-8.11-13.787-15.812-25.82-10.343m84.707 47.163v-35.72c0-10.16-5.136-13.218-12.78-13.218-6.774 0-13.765 4.26-17.15 9.067v39.87h-5.68v-52.76h5.68v7.975c3.822-4.59 11.36-9.287 19.007-9.287 10.705 0 16.604 5.245 16.604 17.15v36.923h-5.68z'/%3E%3Cpath fill='%23EDA945' d='M315.94 16.125v21.12h20.312v5.393H315.94v21.3h-5.752v-21.3h-20.312v-5.392h20.312v-21.12'/%3E%3Cpath fill='%23119EA6' d='M364.78 142.694H0V0h364.78v142.694zM4.46 138.237h355.866V4.46H4.458v133.777z'/%3E%3C/svg%3E");
 		background-repeat: no-repeat;
 		background-position: 50%
@@ -1948,16 +1948,7 @@ ul.job-list ul.job-list li:before {
 		margin-top: 0;
 		background-position: 50%
 	}
-	.primary-nav .off-canvas .header-logo {
-		background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 364.781 142.694'%3E%3Cpath fill='%23119EA6' d='M38.732 88.813c-6.328-13.922-1.69-29.59 11.636-35.646 14.62-6.645 27.917 1.23 34.245 15.152l.633 1.392-40.176 18.26c5.243 10.216 16.137 15.704 27.473 10.552C78.61 95.766 83.14 90.95 85.228 84.72l4.22 2.16c-2.51 7.143-7.312 12.683-15.268 16.3-14.022 6.372-28.713.45-35.448-14.367m13.57-31.126c-11.337 5.153-12.484 17.677-9.085 26.21L78.122 68.03c-3.806-8.11-13.787-15.812-25.82-10.343M99.64 39.415c0-2.403 2.074-4.26 4.368-4.26 2.404 0 4.37 1.857 4.37 4.26a4.383 4.383 0 0 1-4.37 4.37c-2.294 0-4.37-1.967-4.37-4.37m1.53 12.672h5.68v52.76h-5.68v-52.76zm23.488 66.196l3.277-4.588c4.588 5.462 9.613 7.43 17.587 7.43 9.504 0 17.915-4.808 17.915-16.713v-8.41c-3.714 5.46-10.487 9.938-18.352 9.938-13.983 0-23.486-10.596-23.486-27.527 0-16.714 9.503-27.637 23.486-27.637 7.537 0 14.092 3.824 18.352 9.832v-8.52h5.79v52.324c0 16.058-10.925 21.846-23.705 21.846-8.958 0-14.638-1.64-20.864-7.975m38.78-27.09v-25.67c-3.06-5.134-10.05-9.613-17.37-9.613-11.688 0-18.46 9.723-18.46 22.503s6.772 22.393 18.46 22.393c7.32 0 14.31-4.478 17.37-9.614m22.664-2.379c-6.33-13.922-1.69-29.59 11.635-35.646 14.62-6.645 27.917 1.23 34.245 15.152l.633 1.392-40.176 18.26c5.243 10.216 16.137 15.704 27.473 10.552 6.067-2.758 10.597-7.575 12.686-13.805l4.22 2.16c-2.51 7.143-7.31 12.683-15.268 16.3-14.024 6.372-28.714.45-35.45-14.367m13.57-31.126c-11.336 5.153-12.483 17.677-9.084 26.21l34.904-15.867c-3.805-8.11-13.787-15.812-25.82-10.343m84.707 47.163v-35.72c0-10.16-5.136-13.218-12.78-13.218-6.774 0-13.765 4.26-17.15 9.067v39.87h-5.68v-52.76h5.68v7.975c3.822-4.59 11.36-9.287 19.007-9.287 10.705 0 16.604 5.245 16.604 17.15v36.923h-5.68z'/%3E%3Cpath fill='%23EDA945' d='M315.94 16.125v21.12h20.312v5.393H315.94v21.3h-5.752v-21.3h-20.312v-5.392h20.312v-21.12'/%3E%3Cpath fill='%23119EA6' d='M364.78 142.694H0V0h364.78v142.694zM4.46 138.237h355.866V4.46H4.458v133.777z'/%3E%3C/svg%3E");
-		background-repeat: no-repeat;
-		background-position: 50%
-	}
-	.has-bg-image .primary-nav .off-canvas .header-logo {
-		background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 364.781 142.694'%3E%3Cpath fill='%23fff' d='M38.732 88.813c-6.328-13.922-1.69-29.59 11.636-35.646 14.62-6.645 27.917 1.23 34.245 15.152l.633 1.392-40.176 18.26c5.243 10.216 16.137 15.704 27.473 10.552C78.61 95.766 83.14 90.95 85.228 84.72l4.22 2.16c-2.51 7.143-7.312 12.683-15.268 16.3-14.022 6.372-28.713.45-35.448-14.367m13.57-31.126c-11.337 5.153-12.484 17.677-9.085 26.21L78.122 68.03c-3.806-8.11-13.787-15.812-25.82-10.343M99.64 39.415c0-2.403 2.074-4.26 4.368-4.26 2.404 0 4.37 1.857 4.37 4.26a4.383 4.383 0 0 1-4.37 4.37c-2.294 0-4.37-1.967-4.37-4.37m1.53 12.672h5.68v52.76h-5.68v-52.76zm23.488 66.196l3.277-4.588c4.588 5.462 9.613 7.43 17.587 7.43 9.504 0 17.915-4.808 17.915-16.713v-8.41c-3.714 5.46-10.487 9.938-18.352 9.938-13.983 0-23.486-10.596-23.486-27.527 0-16.714 9.503-27.637 23.486-27.637 7.537 0 14.092 3.824 18.352 9.832v-8.52h5.79v52.324c0 16.058-10.925 21.846-23.705 21.846-8.958 0-14.638-1.64-20.864-7.975m38.78-27.09v-25.67c-3.06-5.134-10.05-9.613-17.37-9.613-11.688 0-18.46 9.723-18.46 22.503s6.772 22.393 18.46 22.393c7.32 0 14.31-4.478 17.37-9.614m22.664-2.379c-6.33-13.922-1.69-29.59 11.635-35.646 14.62-6.645 27.917 1.23 34.245 15.152l.633 1.392-40.176 18.26c5.243 10.216 16.137 15.704 27.473 10.552 6.067-2.758 10.597-7.575 12.686-13.805l4.22 2.16c-2.51 7.143-7.31 12.683-15.268 16.3-14.024 6.372-28.714.45-35.45-14.367m13.57-31.126c-11.336 5.153-12.483 17.677-9.084 26.21l34.904-15.867c-3.805-8.11-13.787-15.812-25.82-10.343m84.707 47.163v-35.72c0-10.16-5.136-13.218-12.78-13.218-6.774 0-13.765 4.26-17.15 9.067v39.87h-5.68v-52.76h5.68v7.975c3.822-4.59 11.36-9.287 19.007-9.287 10.705 0 16.604 5.245 16.604 17.15v36.923h-5.68zm31.565-88.723v21.12h20.312v5.393H315.94v21.3h-5.752v-21.3h-20.312v-5.392h20.312v-21.12'/%3E%3Cpath fill='%23fff' d='M364.78 142.694H0V0h364.78v142.694zM4.46 138.237h355.866V4.46H4.458v133.777z'/%3E%3C/svg%3E");
-		background-repeat: no-repeat;
-		background-position: 50%
-	}
+
 	.has-bg-image .main-menu-wrapper,
 	.main-menu-wrapper {
 		background-color: transparent
@@ -1978,7 +1969,7 @@ ul.job-list ul.job-list li:before {
 	.main-menu-wrapper:after {
 		clear: both
 	}
-	.has-bg-image .primary-nav:hover .main-menu-wrapper,
+	.has-bg-image .primary-nav .main-menu-wrapper,
 	.main-menu-wrapper.stick {
 		border-bottom: 1px solid #999;
 		background-color: hsla(0, 0%, 100%, .8)
@@ -2117,22 +2108,22 @@ ul.job-list ul.job-list li:before {
 		display: block
 	}
 	.has-bg-image .primary-nav .main-menu a,
-	.has-bg-image .primary-nav:hover .main-menu-wrapper .main-menu .sub-navigation a {
+	.has-bg-image .primary-nav .main-menu-wrapper .main-menu .sub-navigation a {
 		color: #fff;
 		transition: color .3s ease-in-out
 	}
 	.has-bg-image .primary-nav .main-menu-wrapper.stick .main-menu a,
-	.has-bg-image .primary-nav:hover .main-menu a,
+	.has-bg-image .primary-nav .main-menu a,
 	.primary-nav .main-menu a {
 		color: #444
 	}
 	.has-bg-image .primary-nav .main-menu-wrapper.stick .main-menu a .sub-navigation a,
-	.has-bg-image .primary-nav:hover .main-menu a .sub-navigation a,
+	.has-bg-image .primary-nav .main-menu a .sub-navigation a,
 	.primary-nav .main-menu a .sub-navigation a {
 		color: #fff
 	}
 	.has-bg-image .primary-nav .main-menu-wrapper.stick .main-menu a .sub-navigation a:hover,
-	.has-bg-image .primary-nav:hover .main-menu a .sub-navigation a:hover,
+	.has-bg-image .primary-nav .main-menu a .sub-navigation a:hover,
 	.primary-nav .main-menu a .sub-navigation a:hover {
 		color: #00a7b5
 	}
@@ -3574,6 +3565,186 @@ li.active .showoff-thumb-hover {
 	width: 50%;
 }
 
+#home-slider {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 6rem;
+	background-color: #004358;
+	background-image: url(/images/home/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	overflow: hidden;
+}
+
+#home-slider-inner {
+	max-width: 240px;
+}
+
+@media(min-width: 360px) {
+	#home-slider-inner {
+		max-width: 360px;
+	}
+}
+
+@media(min-width: 480px) {
+	#home-slider-inner {
+		max-width: 480px;
+	}
+}
+
+@media(min-width: 768px) {
+	#home-slider-inner {
+		max-width: 768px;
+	}
+}
+
+@media(min-width: 1024px) {
+	#home-slider-inner {
+		max-width: 1024px;
+		height: 100vh;
+	}
+}
+
+@media(min-width: 1240px) {
+	#home-slider-inner {
+		max-width: 1240px;
+	}
+}
+
+
+.slider {
+
+}
+
+.slider-slide > div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	height: 240px;
+}
+
+.slider-slide > div h2 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	line-height: 1.5rem;
+}
+
+.slider-slide > div > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.slider-slide > div > div h3 {
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.5rem;
+}
+
+.slider-slide > div > div a {
+	display: block;
+	white-space: nowrap;
+	text-decoration: none;
+	border: 2px solid white;
+	color: white;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+.slider-slide-1 >div {
+	background-image: url(/images/home/1.jpg);
+	padding: 1rem;
+	text-align: center;
+}
+
+.slider-slide-2 >div {
+	background-image: url(/images/home/2.jpg);
+}
+
+.slider-slide-3 >div {
+	background-image: url(/images/home/3.jpg);
+}
+
+.slider-slide-4 >div {
+	background-image: url(/images/home/4.jpg);
+}
+
+.slider-slide-5 >div {
+	background-image: url(/images/home/5.jpg);
+}
+
+#slider-controls {
+	padding: 1rem;
+	text-align: center;
+}
+
+#slider-controls button {
+	cursor: pointer;
+	width: 8px;
+	height: 8px;
+	padding: 0;
+	margin: 0 3px;
+	border-radius: 50%;
+	background: #ddd;
+	border: 0;
+}
+
+@media(min-width: 1024px) {
+	#home-slider {
+		height: 100vh;
+	}
+
+	.slider-slide > div {
+		height: 800px;
+		padding: 0 5rem;
+	}
+
+	.slider-slide > div h2 {
+		font-size: 3rem;
+		line-height: 3.5rem;
+	}
+
+	.slider-slide > div > div {
+		flex-direction: row;
+		margin: 5rem 1rem 0 1rem;
+	}
+
+	.slider-slide > div > div > a {
+		margin-left: 3rem;
+		font-size: 1.5rem;
+		padding: 1rem 2rem;
+	}
+
+	.slider-slide > div > div h3 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	.slider-slide-1 >div {
+		padding: 5rem;
+	}
+
+	#slider-controls button {
+		width: 16px;
+		height: 16px;
+		margin: 0 5px;
+	}
+}
+
+#slider-controls button.tns-nav-active {
+	background: #054357;
+}
+
+.tns-ovh {
+	overflow: visible !important;
+}
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
