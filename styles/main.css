@@ -3694,7 +3694,7 @@ li.active .showoff-thumb-hover {
 	height: 8px;
 	padding: 0;
 	margin: 0 3px;
-	border-radius: 50%;
+	border-radius: 3px;
 	background: #ddd;
 	border: 0;
 }
@@ -3747,6 +3747,125 @@ li.active .showoff-thumb-hover {
 .tns-ovh {
 	overflow: visible !important;
 }
+
+.whatwedo {
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 2rem 0;
+	border-top: 4.2rem solid #054357;
+}
+
+.whatwedo > div h2 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	line-height: 1.5rem;
+}
+
+.whatwedo > div > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.whatwedo > div > div h3 {
+	font-size: 1rem;
+	color: #555;
+	line-height: 1.5rem;
+}
+
+.whatwedo-safety {
+	background-image: url(../images/whatwedo/safety.jpg);
+}
+
+.whatwedo-dashboards {
+	background-image: url(../images/whatwedo/dashboards.jpg);
+}
+
+.whatwedo-search {
+	background-image: url(../images/whatwedo/search.jpg);
+}
+
+.whatwedo-ot {
+	background-image: url(../images/whatwedo/ot.jpg);
+}
+
+.whatwedo > div {
+	max-width: 240px;
+	padding: 1rem;
+}
+
+@media(min-width: 360px) {
+	.whatwedo > div {
+		max-width: 360px;
+	}
+}
+
+@media(min-width: 480px) {
+	.whatwedo > div {
+		max-width: 480px;
+	}
+}
+
+@media(min-width: 768px) {
+	.whatwedo > div {
+		max-width: 768px;
+	}
+}
+
+@media(min-width: 1024px) {
+	.whatwedo {
+		height: 100vh;
+		padding: 0;
+	}
+
+	.whatwedo > div {
+		max-width: 1024px;
+	}
+
+	.whatwedo ul {
+		margin-top: 1rem;
+		font-size: 1.4rem;
+	}
+
+	.whatwedo > div h2 {
+		font-size: 3rem;
+		line-height: 3.5rem;
+	}
+
+	.whatwedo > div > div h3 {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+
+	.whatwedo > div > div .video img {
+		width: 580px;
+		height: auto;
+	}
+}
+
+@media(min-width: 1240px) {
+	.whatwedo > div {
+		max-width: 1240px;
+	}
+
+	.whatwedo > div > div {
+		flex-direction: row;
+		align-items: flex-start;
+		margin: 5rem 1rem 0 1rem;
+	}
+
+	.whatwedo > div > div .video img {
+		margin-left: 3rem;
+	}
+}
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
