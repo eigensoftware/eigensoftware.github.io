@@ -1285,7 +1285,7 @@ em {
 	height: 100%;
 	top: 0;
 	width: 100%;
-	background: url(/images/rig-background.jpg) no-repeat 50%;
+	background: url(../images/rig-background.jpg) no-repeat 50%;
 	background-size: cover
 }
 
@@ -1339,7 +1339,7 @@ em {
 
 .eigen-clients-bg {
 	padding-top: 150px;
-	background: url(/images/eigen-clients.jpg) no-repeat top;
+	background: url(../images/eigen-clients.jpg) no-repeat top;
 	background-size: cover
 }
 
@@ -1393,7 +1393,7 @@ em {
 }
 
 .section.world-map {
-	background: url(/images/world-map.jpg) no-repeat 50%;
+	background: url(../images/world-map.jpg) no-repeat 50%;
 	background-size: cover
 }
 
@@ -3049,17 +3049,17 @@ li.active .showoff-thumb-hover {
 }
 
 .services-page-integration article header {
-	background: url(/images/Integration-bg.jpg) no-repeat 50%;
+	background: url(../images/Integration-bg.jpg) no-repeat 50%;
 	background-size: cover
 }
 
 .services-page-support article header {
-	background: url(/images/services/fibre-patch-panel-bg.jpg) no-repeat 50%;
+	background: url(../images/services/fibre-patch-panel-bg.jpg) no-repeat 50%;
 	background-size: cover
 }
 
 .services-page-consulting article header {
-	background: url(/images/services/world-map-bg.jpg) no-repeat 50%;
+	background: url(../images/services/world-map-bg.jpg) no-repeat 50%;
 	background-size: cover
 }
 
@@ -3070,7 +3070,7 @@ li.active .showoff-thumb-hover {
 	font-size: 0;
 	text-align: center;
 	background-color: #00a7b5;
-	background: url(/images/uses/climbing-the-mountain.jpg) no-repeat;
+	background: url(../images/uses/climbing-the-mountain.jpg) no-repeat;
 	background-size: cover
 }
 
