@@ -3800,6 +3800,10 @@ li.active .showoff-thumb-hover {
 	padding: 1rem;
 }
 
+.whatwedo > div > div .video {
+	position: relative;
+}
+
 @media(min-width: 360px) {
 	.whatwedo > div {
 		max-width: 360px;
