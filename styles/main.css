@@ -2112,7 +2112,6 @@ ul.job-list ul.job-list li:before {
 		color: #fff;
 		transition: color .3s ease-in-out
 	}
-	.has-bg-image .primary-nav .main-menu-wrapper.stick .main-menu a,
 	.has-bg-image .primary-nav .main-menu a,
 	.primary-nav .main-menu a {
 		color: #444
