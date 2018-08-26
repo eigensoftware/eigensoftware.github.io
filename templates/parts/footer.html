@@ -79,10 +79,42 @@
   </div>
   <div class=copyright>
     <div class=container>
-      <p>&copy;Copyright 2016 Eigen Ltd.</div>
+      <p>&copy;Copyright 2018 Eigen Ltd.</div>
   </div>
 </footer>
-<script src=/scripts/main.js></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.5/min/tiny-slider.js"></script>
+<script>
+  tns({
+    container: '.slider',
+    items: 3,
+    autoplay: true,
+    autoplayButtonOutput: false,
+    arrowKeys: true,
+    navContainer: '#slider-controls',
+    controls: false,
+    fixedWidth: 240,
+    gutter: 5,
+    responsive: {
+      360: {
+        fixedWidth: 360,
+      },
+      480: {
+        fixedWidth: 480,
+      },
+      768: {
+        fixedWidth: 768,
+      },
+      1024: {
+        fixedWidth: 1024,
+        gutter: 40,
+      },
+      1240: {
+        fixedWidth: 1240,
+      }
+    }
+  });
+</script>
+<script src=./scripts/main.js></script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
