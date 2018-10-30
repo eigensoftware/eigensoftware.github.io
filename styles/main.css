@@ -3869,6 +3869,30 @@ li.active .showoff-thumb-hover {
 	}
 }
 
+#iso9001 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 1rem;
+}
+
+@media(min-width: 768px) {
+	#iso9001 {
+		flex-direction: row;
+	}
+}
+
+#iso9001 img {
+	height: 80px;
+	width: auto;
+	margin: 0 1rem 0 0;
+}
+
+#iso9001 a {
+	color: white;
+}
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
